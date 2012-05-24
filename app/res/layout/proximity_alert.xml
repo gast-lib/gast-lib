@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  
+    <TextView android:id="@+id/locationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/locationLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        style="@style/apptext" />
+    
+    <TextView android:id="@+id/locationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/locationLabel"
+        android:layout_toRightOf="@id/locationLabel"
+        android:text="@string/none"
+        android:paddingLeft="5dip"
+        style="@style/apptext" />
+    
+    <TextView android:id="@+id/latitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/latitudeLabel"
+        android:layout_below="@id/locationValue"
+        android:layout_alignParentLeft="true"
+        style="@style/apptext" />
+    
+    <TextView android:id="@+id/latitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/latitudeLabel"
+        android:layout_toRightOf="@id/latitudeLabel"
+        android:text="@string/none"
+        android:paddingLeft="5dip"
+        style="@style/apptext" />
+    
+    <TextView android:id="@+id/longitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longitudeLabel"
+        android:layout_below="@id/latitudeLabel"
+        android:layout_alignParentLeft="true"
+        style="@style/apptext" />
+    
+    <TextView android:id="@+id/longitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/longitudeLabel"
+        android:layout_toRightOf="@id/longitudeLabel"
+        android:text="@string/none"
+        android:paddingLeft="5dip"
+        style="@style/apptext" />
+    
+    <TextView android:id="@+id/radiusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radiusLabel"
+        android:layout_below="@id/longitudeLabel"
+        android:layout_alignParentLeft="true"
+        style="@style/apptext" />
+    
+    <EditText android:id="@+id/radiusValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/radiusLabel"
+        android:layout_toRightOf="@id/radiusLabel"
+        android:text="10"
+        android:paddingLeft="5dip"
+        style="@style/apptext"
+        android:inputType="number" />
+    
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/setLocation"
+        android:onClick="onSetLocationClick"
+        android:layout_below="@id/radiusValue" />
+    
+    <LinearLayout android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true" >
+  
+	    <Button android:id="@+id/setProximityAlert"
+	        android:layout_height="wrap_content"
+	        android:layout_width="match_parent"
+	        android:text="@string/setProximityAlert"
+	        android:onClick="onSetProximityAlertClick"
+	        android:enabled="false"
+	        android:layout_weight="1" />
+	    
+	    <Button android:id="@+id/clearProximityAlert"
+	        android:layout_height="wrap_content"
+	        android:layout_width="match_parent"
+	        android:text="@string/clearProximityAlert"
+	        android:onClick="onClearProximityAlertClick"
+	        android:enabled="false"
+	        android:layout_weight="1" />
+    </LinearLayout>
+    
+    <RadioGroup android:id="@+id/proximityTypeRadioGroup"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_above="@id/buttons" >
+        
+        <RadioButton android:id="@+id/androidProximityAlert"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/androidProximityAlertTypeLabel"
+            android:layout_weight="1"
+            style="@style/apptext" />
+        <RadioButton android:id="@+id/customProximityAlert"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/customProximityAlertTypeLabel"
+            android:layout_weight="1"
+            style="@style/apptext" />
+    </RadioGroup>
+    
+    <TextView
+        android:layout_above="@id/proximityTypeRadioGroup"
+        style="@style/apptext"
+        android:text="Select Proximity Alert Type" />
+    
+</RelativeLayout>

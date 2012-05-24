@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.example.temperaturesensor"
+      android:versionCode="1"
+      android:versionName="1.0">
+      
+    <!-- Android 2.3.4+ devices: -->  
+    <!--  <uses-sdk android:minSdkVersion="10"  />  -->
+    
+    <!--  Android 3.1+ devices -->
+    <uses-sdk android:minSdkVersion="12"  />
+    
+    <!-- Android 3.1+ devices: -->   
+    <uses-feature android:name="android.hardware.usb.accessory" />
+    	
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+    	
+    	<!-- Android 2.3.4+ devices: -->  
+    	<!--  <uses-library android:name="com.android.future.usb.accessory" /> -->
+    	    
+        <activity android:name=".BaseActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+            </intent-filter>
+            <meta-data 
+                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/accessory_filter" />
+        </activity>
+
+    </application>
+</manifest>

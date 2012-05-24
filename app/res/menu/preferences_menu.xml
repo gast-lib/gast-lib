@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_resetprefs"
+	android:title="@string/menu_resetprefs" android:id="@+id/m_resetprefs"
+	android:orderInCategory="1" />
+
+</menu>

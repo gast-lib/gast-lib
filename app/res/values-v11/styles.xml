@@ -1,0 +1,5 @@
+<resources>
+   	<style name="Theme.Gast" parent="@android:style/Theme.Holo">
+	</style>
+	
+</resources>

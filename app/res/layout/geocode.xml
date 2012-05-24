@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView android:id="@+id/enterLocationLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/enterLocationLabel"
+        android:layout_alignParentTop="true" />
+    
+    <EditText android:id="@+id/enterLocationValue"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/enterLocationLabel"
+        android:text="springfield" />
+    
+    <Button android:id="@+id/lookupLocationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lookupLocationButton"
+        android:layout_below="@id/enterLocationValue"
+        android:onClick="onLookupLocationClick" />
+    
+    <Button android:id="@+id/okButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@android:string/ok"
+        android:onClick="onOkClick" />
+    
+    <ListView android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="false"
+        android:layout_above="@id/okButton"
+        android:layout_below="@id/lookupLocationButton"
+        android:choiceMode="singleChoice" />
+    
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:weightSum="2">
+	<jjil.android.Preview
+		android:id="@+id/preview1" android:layout_width="match_parent"
+		android:layout_height="match_parent" android:layout_weight="1"></jjil.android.Preview>
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <root.gast.image.ImageCameraView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </root.gast.image.ImageCameraView>
+
+        <root.gast.image.LogoView
+            android:background="#00FFFFFF"
+            android:id="@+id/logoView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </root.gast.image.LogoView>
+    </FrameLayout>
+</LinearLayout>

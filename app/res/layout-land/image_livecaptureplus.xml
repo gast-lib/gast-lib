@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:id="@+id/focus"
+		android:weightSum="5">
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/buttonSwitchCamera"
+			android:text="@string/camera" android:layout_weight="1"></Button>
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/buttonZoom"
+			android:text="@string/zoom" android:layout_weight="1"></Button>
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/focus"
+			android:id="@+id/buttonFocus" android:layout_weight="1"></Button>
+		<Button android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/buttonFlash"
+			android:text="@string/flash" android:layout_weight="1"></Button>
+		<Button android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/buttonWhiteBalance"
+			android:text="@string/whiteBalance" android:layout_weight="1"></Button>
+	</LinearLayout>
+	<jjil.android.Preview android:id="@+id/preview1"
+		android:layout_width="match_parent" android:layout_height="match_parent"></jjil.android.Preview>
+</LinearLayout>

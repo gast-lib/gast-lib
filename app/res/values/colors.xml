@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+<!--  00 being fully transparent. -->
+	<color name="snowtransparenthighlight">#55F8F8F6</color>
+
+<!-- http://www.computerhope.com/htmcolor.htm -->
+	<color name="chocolate">#D2691E</color>
+	<color name="background_white">#FFFFFF</color>
+	<color name="normal_black">#000000</color>
+	<color name="boxtitle_brown">#D2691E</color>
+	<color name="emphasis_red">#f00</color>
+	<color name="blackish">#8B7765</color>
+	<color name="lightgrey">#F2F2F2</color>
+	<color name="cornsilk">#FFF8DC</color>
+	<color name="snow">#FFFAFA</color>
+    <color name="red">#7f00</color>
+    <color name="blue">#770000ff</color>
+    <color name="green">#7700ff00</color>
+    <color name="yellow1">#77ffff00</color>
+    <color name="yellow2">#77ffff00</color>
+
+    <color name="khaki">#ADA96E</color>
+    <color name="khaki_plus">#BDA96E</color>
+
+    <color name="orange4">#f00</color>
+    <color name="orange5">#f00</color>
+
+	<color name="gray">#F2F2F2</color>
+	<color name="mygraytransparent">#AAF2F2F2</color>
+
+    <color name="blue2">#0000ff</color>
+    <color name="blue25">#0000ff</color>
+        
+    <color name="screen_background_black">#ff000000</color>
+
+    <color name="solid_red">#f00</color>
+    <color name="solid_blue">#0000ff</color>
+    <color name="solid_green">#f0f0</color>
+    <color name="solid_yellow">#ffffff00</color>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="voiceaction_yeswords">
+        <item>yes</item>
+        <item>ok</item>
+    </array>
+    <array name="voiceaction_nowords">
+        <item>no</item>
+    </array>
+    <array name="voiceaction_neutralwords">
+        <item>cancel</item>
+        <item>done</item>
+    </array>
+
+    <string name="voiceaction_cancelled_response">Cancelled.</string>
+    
+    <string name="voiceaction_dontunderstand">I did not understand, please try again.</string>
+    <string name="voiceaction_unknown">I did not understand.</string>
+    <string name="voiceaction_not_command">%1$s is not a command</string>
+    <string name="voiceaction_heard_nothing">I did not understand because I heard nothing.</string>
+    <string name="voiceaction_inaccurate">I did not understand because I did not hear you well.</string>
+    <string name="voiceaction_retry">, please try again.</string>
+    
+</resources>

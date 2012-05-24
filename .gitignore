@@ -14,3 +14,17 @@ gen/
 
 # Local configuration file (sdk path, etc)
 local.properties
+
+db/*.sqlite3
+log/*.log
+tmp/**/*
+.prefs
+target
+log
+.settings
+workspace
+*~
+.DS_Store
+.svn
+nbproject
+.metadata

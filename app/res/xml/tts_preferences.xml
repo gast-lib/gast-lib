@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!-- digest this post: http://proandroiddev.blogspot.com/2011/04/honeycomb-tip-1-preferencefragment.html -->
+
+  <PreferenceCategory android:key="@string/pref_speech_key" android:title="Speech Settings">
+
+   <EditTextPreference
+        android:key="@string/pref_tts_speechrate"
+        android:title="@string/pref_tts_speechrate_title"
+        android:defaultValue="@string/pref_tts_speechrate_default"
+        android:summary="The speech rate for the TextToSpeech engine. 1 is the normal speed, lower values slow down the speech (0.5 is half the normal speech rate), greater values accelerate it (2 is twice the normal speech rate)"/>
+
+   <EditTextPreference
+        android:key="@string/pref_tts_pitch"
+        android:title="@string/pref_tts_pitch_title"
+        android:defaultValue="@string/pref_tts_pitch_default"/>
+
+   <EditTextPreference
+        android:key="@string/pref_tts_silencelength"
+        android:title="@string/pref_tts_silencelength_title"
+        android:defaultValue="@string/pref_tts_silencelength_default"
+        />
+
+   <EditTextPreference
+        android:key="@string/pref_tts_volume"
+        android:title="@string/pref_tts_volume_title"
+        android:defaultValue="@string/pref_tts_volume_default"
+        />
+
+   <EditTextPreference
+        android:key="@string/pref_tts_pan"
+        android:title="@string/pref_tts_pan_title"
+        android:defaultValue="@string/pref_tts_pan_default"
+        />
+
+   <CheckBoxPreference
+        android:key="@string/pref_tts_queueaction"
+        android:title="@string/pref_tts_queueaction_title"
+        android:defaultValue="@string/pref_tts_queueaction_default"
+        />
+   <CheckBoxPreference
+        android:key="@string/pref_tts_customaudio"
+        android:title="@string/pref_tts_customaudio_title"
+        android:defaultValue="@string/pref_tts_customaudio_default"
+        />
+
+   <CheckBoxPreference
+        android:key="@string/pref_tts_tofile"
+        android:title="@string/pref_tts_tofile_title"
+        android:defaultValue="@string/pref_tts_tofile_default"
+        />
+
+	</PreferenceCategory>
+</PreferenceScreen>

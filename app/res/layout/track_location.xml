@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:layout_margin="5dip">
+        
+	    <Button
+	        android:id="@+id/startTrackingLocationButton"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:text="@string/startTrackingButtonText"
+	        android:onClick="onStartTrackingButtonClick"
+	        android:layout_alignParentLeft="true"
+	        android:enabled="true"
+	        android:layout_weight="1"
+	        android:layout_marginRight="5dip" />
+	        
+	    <Button
+	        android:id="@+id/stopTrackingLocationButton"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:text="@string/stopTrackingButtonText"
+	        android:onClick="onStopTrackingButtonClick"
+	        android:layout_alignParentRight="true"
+	        android:enabled="false"
+	        android:layout_weight="1" />
+    </LinearLayout>
+  
+    <com.google.android.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:apiKey="@string/mapkey"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/buttonsLayout" />
+    
+</RelativeLayout>

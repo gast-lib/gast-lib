@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="warning_nfc_is_off">NFC is currently turned off!</string>
+    <string name="turn_on_nfc">Simple NFC Inventory can\'t be used without NFC enabled. Please turn on NFC in the Settings and then use the back button to return to this app.</string>
+    <string name="instructions">Scan the NFC tag on the computer for information on its internals. Use the editable text fields below to make changes and click the update button to re-flash the NFC tag.</string>
+    <string name="computer_name_label">Computer Name</string>
+    <string name="computer_ram_label">RAM (GB)</string>
+    <string name="computer_processor_label">Processor speed (MHz)</string>
+    <string name="write_to_tag_button_label">Update</string>
+    <string name="new_tag_found">New inventory tag found!</string>
+    <string name="replace_current_tag">Read tag and replace currently displayed tag information in the textfields?</string>
+    <string name="ready_to_write">Ready to write to NFC tag!</string>
+    <string name="ready_to_write_instructions">Touch your device to a computer\'s tag to update its inventory.</string>
+
+</resources>

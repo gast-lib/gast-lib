@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView android:id="@+id/sensorSelectorLabel"
+        style="@style/apptext"
+        android:text="@string/selectSensorSectionHeading"
+        android:layout_alignParentTop="true"/>
+    
+    <RadioGroup android:id="@+id/sensorSelector" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorSelectorLabel">
+        
+        <RadioButton android:id="@+id/accelerometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accelerometerLabel"
+            android:checked="true"
+            android:onClick="onSensorSelectorClick" />
+        
+        <RadioButton android:id="@+id/linearAcceleration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/linearAccelerationSensorLabel"
+            android:checked="false"
+            android:onClick="onSensorSelectorClick" />
+    </RadioGroup>
+    
+    <TextView android:id="@+id/optionsLabel"
+        style="@style/apptext"
+        android:text="@string/optionsSectionHeading"
+        android:layout_below="@id/sensorSelector" />
+    
+    <CheckBox android:id="@+id/ttsNotificationsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speakMovementDetectedLabel"
+        android:checked="@bool/useTtsDefaultValue"
+        android:layout_below="@id/optionsLabel"
+        android:onClick="onTtsNotificationsCheckBoxClicked" />
+    
+    <CheckBox android:id="@+id/highPassFilterCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enableHighPassFilterLabel"
+        android:checked="@bool/useHighPassFilterDefaultValue"
+        android:layout_below="@id/ttsNotificationsCheckBox"
+        android:onClick="onHighPassFilterCheckBoxClicked" />
+    
+    <ToggleButton android:id="@+id/readAccelerationDataToggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_alignParentBottom="true"
+        android:textOn="@string/readingAccelerationData"
+        android:textOff="@string/startReadingAccelerationData"
+        android:onClick="onReadAccelerationDataToggleButtonClicked" />
+    
+    <com.androidplot.xy.XYPlot android:id="@+id/XYPlot"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        title="Acceleration Plot"
+        android:layout_below="@id/highPassFilterCheckBox"
+        android:layout_above="@id/readAccelerationDataToggleButton"/>
+
+</RelativeLayout>

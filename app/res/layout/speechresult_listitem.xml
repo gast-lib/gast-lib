@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dip"
+    android:orientation="horizontal"
+    android:weightSum="110">
+    <TextView
+    	style="@style/appspeechresulttext"
+        android:id="@+id/tv_speech_result_number"
+        android:layout_width="1dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+    />
+    <TextView
+    	style="@style/appspeechresulttext"
+        android:id="@+id/tv_speech_result_confidence"
+        android:layout_width="1dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="10" 
+    />
+    <TextView
+    	style="@style/appspeechresulttext"
+        android:id="@+id/tv_speech_result"
+        android:layout_width="1dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="80" 
+        android:singleLine="false"
+    />
+    <TextView
+    	style="@style/appspeechresulttext"
+        android:id="@+id/tv_speech_result_flag"
+        android:layout_width="1dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="10" 
+    />
+</LinearLayout>

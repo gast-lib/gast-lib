@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_stop_speak"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:text="@string/btn_tts_stop_speak_label"
+	    android:enabled="false"
+    	/>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="9"
+>
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_speak"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="3"
+	    android:text="@string/btn_speak_label"
+    	/>
+
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_play_earcon"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="3"
+	    android:text="@string/btn_play_earcon_label"
+    	/>
+
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_play_silence"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="3"
+	    android:text="@string/btn_play_silence_label"
+    	/>
+</LinearLayout>
+
+
+	<TextView style="@style/line_separator"/>
+
+	<TextView 
+		style="@style/apptext"
+        android:text="@string/tts_textToSpeakHeading"/>
+    
+	<LinearLayout 
+		android:id="@+id/ly_ttstarget"
+	    android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:weightSum="100"
+	> 
+	<EditText android:id="@+id/et_tts_target"
+		style="@style/appbutton" 
+	    android:layout_width="1dip" 
+		android:layout_weight="85"
+	    android:layout_height="match_parent" 
+		>
+	</EditText>
+
+	<ImageButton 
+		android:id="@+id/bt_ttsTargets"
+		style="@style/dropdownbutton"
+	    android:layout_width="1dip" 
+	    android:layout_height="match_parent" 
+		android:layout_weight="15"
+		/>
+	</LinearLayout>
+
+	<TextView style="@style/line_separator"/>
+	
+	<RelativeLayout 
+		android:id="@+id/rl_resultsummary"
+	    android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+	> 
+	<TextView 
+		style="@style/apptext"
+		android:id="@+id/tv_speechResultsHeading"
+        android:text="@string/speechResultsHeading"
+	    android:layout_width="wrap_content" 
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dip"
+        />
+
+	<TextView 
+		style="@style/apptext"
+		android:id="@+id/tv_speechResultsSummary"
+        android:text=""
+	    android:layout_width="wrap_content" 
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@+id/tv_speechResultsHeading"/>
+    </RelativeLayout>
+
+	<ScrollView
+		android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	android:background="@color/khaki"
+		>
+	<TextView 
+		style="@style/apptext"
+		android:id="@+id/tv_resultlog"
+        android:text=""
+	    android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	android:background="@color/khaki"
+    	android:textColor="@android:color/black"/>
+	</ScrollView>
+
+</LinearLayout>

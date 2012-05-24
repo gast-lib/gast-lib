@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_speechparam"
+	android:title="@string/menu_speechparam" android:id="@+id/m_speechparam"
+	android:orderInCategory="1" />
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_setlanguage"
+	android:title="@string/menu_setlanguage" android:id="@+id/m_setlanguage"
+	android:orderInCategory="2" />
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_languageavailable"
+	android:title="@string/menu_languageavailable" android:id="@+id/m_checkmenu_languageavailable"
+	android:orderInCategory="3" />
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_speech_language_details"
+	android:title="@string/menu_speech_language_details" android:id="@+id/m_speech_language_details"
+	android:orderInCategory="4" />
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_speech_compute_index"
+	android:title="@string/menu_speech_compute_index" android:id="@+id/m_speech_compute_index"
+	android:orderInCategory="5" />
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_write_speech_activation_tag"
+	android:title="@string/menu_write_speech_activation_tag" android:id="@+id/m_write_speech_activation_tag"
+	android:orderInCategory="6" />
+
+</menu>

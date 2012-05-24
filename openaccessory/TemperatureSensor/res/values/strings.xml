@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">AOATempSensor</string>
+	<string name="no_device">Please connect the accessory.</string>
+</resources>

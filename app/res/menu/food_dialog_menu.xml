@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_param"
+	android:title="@string/menu_param" android:id="@+id/m_match_param"
+	android:orderInCategory="1" />
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_showdb_param"
+	android:title="@string/menu_showdb_param" android:id="@+id/m_showdb_param"
+	android:orderInCategory="2" />
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_resetdb_param"
+	android:title="@string/menu_resetdb_param" android:id="@+id/m_resetdb_param"
+	android:orderInCategory="3" />
+
+</menu>

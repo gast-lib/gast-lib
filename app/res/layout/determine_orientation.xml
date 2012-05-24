@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RadioGroup android:id="@+id/sensorSelector" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+        
+        <RadioButton android:id="@+id/gravitySensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gravitySensorLabel"
+            android:checked="true"
+            android:onClick="onSensorSelectorClick" />
+        
+        <RadioButton android:id="@+id/accelerometerMagnetometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accelerometerMagnetometerLabel"
+            android:checked="false"
+            android:onClick="onSensorSelectorClick" />
+        
+        <RadioButton android:id="@+id/gravityMagnetometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gravityMagnetometerLabel"
+            android:checked="false"
+            android:onClick="onSensorSelectorClick" />
+        
+        <RadioButton android:id="@+id/rotationVector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rotationVectorLabel"
+            android:checked="false"
+            android:onClick="onSensorSelectorClick" />
+    </RadioGroup>
+    
+    <ToggleButton android:id="@+id/ttsNotificationsToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speakOrientationLabel"
+        android:checked="true"
+        android:layout_below="@id/sensorSelector"
+        android:textOn="@string/ttsNotificationsOn"
+        android:textOff="@string/ttsNotificationsOff"
+        android:onClick="onTtsNotificationsToggleButtonClicked" />
+    
+    <TextView android:id="@+id/selectedSensorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selectedSensorLabel"
+        android:layout_below="@id/ttsNotificationsToggleButton"
+        android:layout_marginRight="5dip" />
+    
+    <TextView android:id="@+id/selectedSensorValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/selectedSensorLabel"
+        android:layout_alignTop="@id/selectedSensorLabel"
+        android:layout_alignBottom="@id/selectedSensorLabel" />
+    
+    <TextView android:id="@+id/orientationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orientationLabel"
+        android:layout_below="@id/selectedSensorValue"
+        android:layout_marginRight="5dip" />
+    
+    <TextView android:id="@+id/orientationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/orientationLabel"
+        android:layout_alignTop="@id/orientationLabel"
+        android:layout_alignBottom="@id/orientationLabel" />
+    
+    <TextView android:id="@+id/sensorXLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orientationValue"
+        android:layout_marginRight="5dip" />
+    
+    <TextView android:id="@+id/sensorXValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/sensorXLabel"
+        android:layout_alignTop="@id/sensorXLabel"
+        android:layout_alignBottom="@id/sensorXLabel" />
+    
+    <TextView android:id="@+id/sensorYLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorXLabel"
+        android:layout_marginRight="5dip" />
+    
+    <TextView android:id="@+id/sensorYValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/sensorYLabel"
+        android:layout_alignTop="@id/sensorYLabel"
+        android:layout_alignBottom="@id/sensorYLabel" />
+    
+    <TextView android:id="@+id/sensorZLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorYLabel"
+        android:layout_marginRight="5dip" />
+    
+    <TextView android:id="@+id/sensorZValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/sensorZLabel"
+        android:layout_alignTop="@id/sensorZLabel"
+        android:layout_alignBottom="@id/sensorZLabel" />
+
+</RelativeLayout>

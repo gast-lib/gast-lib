@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- digest this post: http://proandroiddev.blogspot.com/2011/04/honeycomb-tip-1-preferencefragment.html -->
+
+    <PreferenceCategory
+        android:key="@string/food_preferences_key"
+        android:title="Food Edit Dialog Settings" >
+
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_food_default"
+            android:key="@string/pref_food_ordered"
+            android:title="@string/pref_food_ordered_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/food_preferences_lookup_key"
+        android:title="Food Lookup Dialog Settings" >
+
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_food_default"
+            android:key="@string/pref_food_lucene"
+            android:title="@string/pref_food_lucene_title" />
+        
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_food_or_default"
+            android:key="@string/pref_food_or"
+            android:title="@string/pref_food_or_title" />
+
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_food_default"
+            android:key="@string/pref_food_prefix"
+            android:title="@string/pref_food_prefix_title" />
+        
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_food_default"
+            android:key="@string/pref_food_phrase"
+            android:title="@string/pref_food_phrase_title" />
+        
+    </PreferenceCategory>
+        
+        
+</PreferenceScreen>

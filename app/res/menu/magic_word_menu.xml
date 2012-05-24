@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_hint"
+	android:title="@string/menu_hint" android:id="@+id/m_magicword_hint"
+	android:orderInCategory="1" />
+
+</menu>

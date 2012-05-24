@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="warning_nfc_is_off">NFC is currently turned off!</string>
+    <string name="turn_on_nfc">NFC can\'t be used without NFC enabled. Please turn on NFC in the Settings and then use the back button to return to this app.</string>
+    <string name="ready_to_write">Ready to write to NFC tag!</string>
+    <string name="ready_to_write_instructions">Touch your device to a computer\'s tag to update its inventory.</string>
+</resources>

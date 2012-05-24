@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="12"
+>
+		<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_audio_pitch_startstop"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="6"
+	    android:text="@string/audio_start_pitch"
+    	/>
+    
+			<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_audio_clapper_startstop"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="6"
+	    android:text="@string/audio_start_clapper"
+    	/>
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="12"
+>
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_audio_clapper_audio_startstop"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="6"
+	    android:text="@string/audio_start_audio_clapper"
+    	/>
+
+		<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_audio_singing_startstop"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="6"
+	    android:text="@string/audio_start_singing_clapper"
+    	/>
+</LinearLayout>
+
+		<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_audio_stopall"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:text="@string/audio_stop_clapper_all"
+    	/>
+
+
+<TextView style="@style/line_separator" />
+
+<TextView
+    android:id="@+id/tv_recording_status"
+    style="@style/apptext"
+    android:text="@string/audio_status_stopped" />
+
+<TextView style="@style/line_separator"/>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="12"
+>
+	
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="12"
+    android:layout_weight="6"
+>
+    
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_audio_low"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="6"
+	    android:text="@string/audio_play_low"
+    	/>
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_audio_mid"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="6"
+	    android:text="@string/audio_play_mid"
+    	/>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="12"
+    android:layout_weight="6"
+>
+    
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_audio_high"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="6"
+	    android:text="@string/audio_play_high"
+    	/>
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_audio_all"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="6"
+	    android:text="@string/audio_play_all"
+    	/>
+</LinearLayout>
+
+</LinearLayout>
+	<TextView style="@style/line_separator"/>
+
+	<TextView style="@style/line_separator"/>
+	
+	<TextView
+		android:id="@+id/tv_magnitude_label"
+        style="@style/apptext"
+        android:text="@string/audio_log"/>
+				
+	<ScrollView
+		android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	android:background="@color/khaki"
+		>
+	<TextView 
+		style="@style/apptext"
+		android:id="@+id/tv_resultlog"
+        android:text=""
+	    android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	android:background="@color/khaki"
+    	android:textColor="@android:color/black"/>
+	</ScrollView>
+
+<!-- line separator -->
+</LinearLayout>

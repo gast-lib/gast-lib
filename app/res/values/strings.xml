@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Sensing Playground</string>
+    <string name="activity_title">Android Sensing Playground</string>
+    <string name="app_icon_label">Sensing Playground</string>
+    
+    <!-- location -->
+    <string name="locationSectionHeading">Location Services</string>
+    <string name="launchGetCurrentLocationActivityButtonText">Get Current Location</string>
+    <string name="latitudeLabel">Latitude:</string>
+    <string name="longitudeLabel">Longitude:</string>
+    <string name="providerLabel">Provider:</string>
+    <string name="accuracyLabel">Accuracy:</string>
+    <string name="timeToFixLabel">Time to Fix:</string>
+    <string name="secondsUnit">second(s)</string>
+    <string name="metersUnit">meters(s)</string>
+    <string name="enabledProvidersLabel">Enabled Providers:</string>
+    <string name="changeLocationProviderSettingsText">Change Location Provider Settings</string>
+    <string name="launchTrackLocationActivityButtonText">Track Location</string>
+    <string name="launchProximityAlertActivityButtonText">Add Proximity Alert</string>    
+	<string name="startTrackingButtonText">Start Tracking</string>
+    <string name="stopTrackingButtonText">Stop Tracking</string>
+	<string name="setProximityAlert">Set Proximity\nAlert</string>
+    <string name="clearProximityAlert">Clear Proximity\nAlert</string>
+    <string name="selectProximityAlertTypeLabel">Select Proximity Alert Type</string>
+    <string name="androidProximityAlertTypeLabel">Android</string>
+    <string name="customProximityAlertTypeLabel">Custom</string>
+    <string name="locationLabel">Location:</string>
+    <string name="latitudeLabel">Latitude:</string>
+    <string name="longitudeLabel">Longitude:</string>
+    <string name="none">None</string>
+    <string name="setLocation">Set Location</string>
+    <string name="enterLocationLabel">Enter Location:</string>
+    <string name="lookupLocationButton">Lookup Location</string>
+    <string name="radiusLabel">Enter Radius (m):</string>
+    <string name="geocodeErrorTitle">Geocoding Error</string>
+    <string name="geocodeErrorMessage">Geocoding of location failed. Try re-submitting location.</string>
+    
+    <!-- Sensors -->
+    <string name="gravitySensorLabel">Gravity Sensor</string>
+    <string name="accelerometerMagnetometerLabel">Accelerometer &amp; Magnetometer</string>
+    <string name="gravityMagnetometerLabel">Gravity Sensor &amp; Magnetometer</string>
+    <string name="rotationVectorLabel">Rotation Vector</string>
+    <string name="selectedSensorLabel">Selected Sensor:</string>
+    <string name="faceUpText">Face Up</string>
+    <string name="faceDownText">Face Down</string>
+    <string name="orientationLabel">Orientation:</string>
+    <string name="azimuthLabel">Azimuth (Z Axis):</string>
+    <string name="pitchLabel">Pitch (X Axis):</string>
+    <string name="rollLabel">Roll (Y Axis):</string>
+    <string name="xAxisLabel">X Axis:</string>
+    <string name="yAxisLabel">Y Axis:</string>
+    <string name="zAxisLabel">Z Axis:</string>
+    <string name="proximityLabel">Proximity (cm):</string>
+    <string name="speakOrientationLabel">Speak Orientation</string>
+    <string name="speakMovementDetectedLabel">Speak Movement Detected</string>
+    <string name="ttsNotificationsOn">TTS Notifications On</string>
+    <string name="ttsNotificationsOff">TTS Notifications Off</string>
+    <string name="rotationMatrixGenFailureMessage">Failed to generate rotation matrix</string>
+    <string name="accelerometerLabel">Accelerometer</string>
+    <string name="linearAccelerationSensorLabel">Linear Acceleration Sensor</string>
+    <string name="startReadingAccelerationData">Start Reading Acceleration Data</string>
+    <string name="readingAccelerationData">Reading Acceleration Data</string>
+    <string name="enableHighPassFilterLabel">Enable High-Pass Filter</string>
+    <string name="selectSensorSectionHeading">Select Sensor</string>
+    <string name="optionsSectionHeading">Options</string>
+    <string name="movementDetectedText">Movement Detected</string>
+    <string name="gpsAltitudeLabel">GPS Altitude</string>
+    <string name="barometerAltitudeLabel">Barometer Altitude (Standard Pressure)</string>
+    <string name="mslpBarometerAltitudeLabel">Barometer Altitude (MSLP)</string>
+    <string name="altitudeLabel">Altitude (m):</string>
+    <string name="relativeAltitudeLabel">Relative Altitude (m):</string>
+    <string name="mslpLabel">MSLP (milibar):</string>
+    <string name="standardPressureLabel">Standard Pressure (milibar):</string>
+    <string name="webServiceConnectionFailureMessage">Could not read pressure from web service</string>
+    <string name="gpsNotEnabledMessage">Warning: GPS is not enabled</string>
+    <string name="notAvailable">N/A</string>
+
+<!--  general -->
+	<!-- an error title for a dialog -->
+	<string name="d_error">Error</string>
+	<string name="d_info">Info</string>
+	<string name="d_select_language">Select language</string>
+	<string name="d_select_audio_stream">Select audio stream</string>
+	<string name="d_sent">Sent</string>
+	<string name="d_exit">Exit</string>
+	<string name="d_ok">Ok</string>
+
+	<!-- pattern rich world sensing -->
+    <string name="audioSectionHeading">Audio</string>
+    <string name="nfcSectionHeading">NFC</string>
+    <string name="imageSectionHeading">Image Processing</string>
+
+    <string name="launchNfc">Simple Inventory</string>
+    <string name="launchNfcPeer">Peer To Peer Inventory</string>
+    <string name="launchNfcBeam">Beam Inventory</string>
+    <string name="launchImageBarcode">Barcode</string>
+    <string name="launchImageDetectLogo">Detect Logo</string>
+    <string name="launchImageDetectLogoBetter">Detect Logo Better</string>
+    <string name="launchImageDetectLogoFaster">Detect Logo Faster</string>
+    <string name="launchDetectFaces">Detect Faces</string>
+    <string name="launchClapper">Clapper</string>
+
+    <string name="launchLiveCapture">Live Capture</string>
+    <string name="launchLiveCapturePlus">Live CapturePlus</string>
+    <string name="launchSimpleCaptureActivity">Simple Capture</string>
+        
+     <!-- camera -->
+    <string name="switchCamera">Switch camera</string>
+    <string name="camera">Camera</string>
+    <string name="zoom">Zoom</string>
+    <string name="focus">Focus</string>    
+
+    <string name="no_cameras">This device has no cameras!</string>
+    <string name="flash">Flash</string>
+    <string name="whiteBalance">White Balance</string>
+        
+    <!-- camera simple capture -->
+    <string name="capture">Capture</string>
+    <string name="captureAdvice">&quot;Enter filename&quot;</string>
+
+   	<!-- speech -->
+    <string name="speechSectionHeading">Speech Recognition</string>
+    <string name="launchSpeechRecognition">Try Speech</string>
+    <string name="launchMagicWord">Say the Magic Word</string>
+    <string name="launchMagicWordDemo">Combined Demo</string>
+    <string name="launchMagicWordActivityName">Say the Magic Word</string>
+    <string name="launchMagicWordExecutorActivityName">Voice Executor Demo</string>
+
+    <string name="launchSpeechRecognitionActivityName">Speech Recognition Playground</string>
+    
+    <string name="launchFoodDialog">Food Dialogue Matcher Playground</string>
+    <string name="launchMultiTurnFoodDialog">Multi-turn Food Dialogue</string>
+    <string name="launchSpeechActivationService">Activation Service Control</string>
+    <string name="launchSpeechActivationStartStop">Speech Activation Start Stop</string>
+    <string name="eyesfree_speechlabel">Speech Activation Detected</string>
+    
+    <!-- Sensors -->
+    <string name="launchSensorList">Sensor List</string>
+    <string name="launchNorthFinder">North Finder</string>
+    <string name="launchDetermineOrientation">Determine Orientation</string>
+    <string name="launchDetermineMovement">Determine Movement</string>
+    <string name="launchDetermineAltitude">Determine Altitude</string>
+        
+    <string name="btn_speak_label">Speak</string>
+    <string name="btn_speak_label_fordisplay">Displaying results</string>
+    <string name="btn_tts_stop_speak_label">Stop speaking</string>
+    <string name="btn_speech_write_activation_tag">Write speech activation tag</string>
+    
+    <string name="speech_prompt">Speak</string>
+    <string name="speechTargetHeading">What you are trying to say</string>
+    <string name="speechTargetPresetHeading">Select preset</string>
+    <string name="speechActivationHeading">Select speech activation method</string>
+    <string name="speechResultsHeading">Results: </string>
+    <string name="speechNotAvailableMessage">Speech recognition not supported on this device</string>
+    <string name="speechActiviationHeading">Activation</string>
+    <string name="SpeechRecognitionResultsActivityLabel">Speech Recognition Results</string>
+    <string name="speechRecognitionFailed">Did not understand, please try again</string>
+    <string name="speechMultiFoodResultHeading">Recognition Results</string>
+    <string name="speech_data_check_result_title">Language Details Results</string>
+    
+    <string name="speechActiviationHeading">Activation Method</string>
+    <string name="speechActiviationControlHeading">Activation Control</string>
+    
+    <string name="speechFoodBrowserName">Food Database Browser</string>
+    
+    <string name="speech_magic_word_prompt">Say the magic word</string>
+    <string name="speech_magic_word_secret">tree</string>
+    <string name="speech_magic_word_correct_prompt">Correct! You said the magic word: </string>
+    <string name="speech_magic_word_fail_prompt">Wrong! The magic word is not: </string>
+    <string name="speech_magic_word_heard_nothing">Heard nothing</string>
+    <string name="menu_hint">Hint</string>
+    
+    <string name="btn_food_lookup_label">Lookup</string>
+    <string name="btn_food_edit_label">Edit</string>
+    <string name="btn_food_edit_and_compare_label">Edit and Compare</string>
+    <string name="btn_food_quiz_label">Quiz</string>
+    <string name="speechFoodResultHeading">Transcript</string>
+    
+    <string name="btn_stop_speak_label">Stop Listening</string>
+    
+	<string name="menu_speechparam">Speech Parameters</string>
+    <string name="menu_reset_speechparam">Reset All</string>
+    <string name="menu_filterparam">Filter Parameters</string>
+    <string name="menu_suggestions">Suggestions</string>
+    <string name="menu_resetprefs">Reset to defaults</string>
+    <string name="menu_setlanguage">Set Language</string>
+    <string name="menu_speech_language_details">Language Details</string>
+    <string name="menu_setaudiostream">Set Audio Stream</string>
+    <string name="menu_languageavailable">Test Locale</string>
+    <string name="menu_speech_compute_index">Compute Index</string>
+    <string name="menu_showdb_param">Show Foods</string>
+    <string name="menu_resetdb_param">Reset Database</string>
+    <string name="menu_write_speech_activation_tag">Write Speech Activation Tag</string>
+
+    <string name="labelWriteTag">Write Activation Tag</string>
+    
+    <string name="menu_param">Matching Preferences</string>
+        
+    <string name="speech_activation_btn_prefix">Start </string>
+    <string name="speech_activation_btn_listening">Listening for </string>
+
+    <string name="speech_launcher_prompt">Say a test phrase.</string>
+    
+    <string name="btn_speech_start_service">Start</string>
+    <string name="btn_speech_stop_service">Stop</string>
+    <!-- select type -->    
+    
+    <string name="btn_start_motion_activate">Start Movement Activator</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_stop">Stop</string>
+    
+    
+	<array name="default_speech_targets">
+    	<item>Cumin Seeds</item>
+    	<item>Cumin</item>
+    	<item>Decaf</item>
+    	<item>check</item>
+    	<item>uncheck</item>
+    	<item>Heart</item>
+    	<item>It’s not easy to wreck a nice beach</item>
+    	<item>Sally sell sea shells by the sea shore</item>
+    	<item>My android and I went to the store</item>
+    	<item>Je joue au tennis</item>
+    	<item>Vamos a la playa</item>
+    	<item>Say s</item>
+    </array>
+
+    <string name="sensorSectionHeading">Physical Sensors</string>
+        
+<!-- tts -->
+
+    <string name="TtsPlayActivityLabel">Text-to-Speech Playground</string>
+    <string name="ttsSectionHeading">Text-to-Speech</string>
+    <string name="tts_textToSpeakHeading">Text to speak</string>
+    <string name="launchTtsPlay">Try Text-to-Speech</string>
+    <string name="launchTtsInfo">Diagnostics</string>
+    <string name="launchTtsDemo">Demo</string>
+
+    <string name="btn_play_earcon_label">Earcon</string>
+    <string name="btn_play_silence_label">Silence</string>
+
+	<string name="tts_info_activity_title">Text-to-Speech Diagnostics</string>
+    <string name="tts_seelocales">See available locales with data</string>
+    <string name="tts_seelocalesnodata">See locales status</string>
+    <string name="tts_dataCheck">Data check</string>
+    <string name="tts_init_failed">Unable to create text to speech</string>
+    <string name="tts_install_tts_data">Requires Language data to proceed, would you like to install?</string>
+    
+    <string name="tts_d_stilldownloading_message">Please wait for the language data to finish installing and try again.</string>
+    <string name="tts_d_stilldownloading_buttonwait">Wait</string>
+    <string name="tts_d_stilldownloading_buttonretry">Retry</string>
+    
+    <string name="menu_ttsparam">parameters</string>
+
+    <string name="tts_demotext1">Attention customers</string>
+    <string name="tts_">Attention customers</string>
+
+    <!-- TODO, add some chinese -->
+    <array name="default_tts_targets">
+    	<item>Heart</item>
+    	<item>Sally sell sea shells by the sea shore</item>
+    	<item>Broccoli is my favorite vegetable</item>
+    	<item>android</item>
+    	<item>Hola</item>
+    	<item>Quieres una alcachofa?</item>
+    	<item>bonjour comment allez-vous</item>
+    	<item>Say s</item>
+    </array>
+    
+    <!-- AOA -->
+    <string name="no_device">Please connect the accessory.</string>
+
+    <string name="set_parameters_failed">Set parameters failed: </string>
+    
+    <!-- audio -->
+    <string name="audio_start_clapper">Start Clapper</string>
+    <string name="audio_stop_clapper">Stop Clapper</string>
+    <string name="audio_magnitude_label">Max Amplitude</string>
+    	
+        <!-- audio -->
+    <string name="audio_start_clapper">Start Clapper</string>
+    <string name="audio_stop_clapper">Stop</string>
+    <string name="audio_stop_clapper_all">Stop Recording</string>
+    <string name="audio_magnitude_label">Max Amplitude</string>
+    <string name="audio_log">Detections</string>
+    <string name="audio_start_pitch">Start Logging</string>
+    
+    <string name="audio_start_audio_clapper">Start Noise Clapper</string>
+    <string name="audio_start_singing_clapper">Start Singing Clapper</string>
+    
+    <string name="audio_play_low">Play low</string>
+    <string name="audio_play_mid">Play Mid</string>
+    <string name="audio_play_high">Play High</string>
+    <string name="audio_play_all">Play All</string>
+
+    <string name="audio_status_recording">Recording</string>
+    <string name="audio_status_stopped">Not Recording</string>
+    
+</resources>

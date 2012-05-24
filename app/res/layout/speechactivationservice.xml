@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/apptext"
+        android:text="@string/speechActiviationHeading" />
+
+    <Button
+        android:id="@+id/btn_speech_activation_movement"
+        style="@style/appbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/speech_activation_movement" />
+
+    <Button
+        android:id="@+id/btn_speech_activation_camera"
+        style="@style/appbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/speech_activation_camera"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_speech_activation_clap"
+        style="@style/appbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/speech_activation_clap" />
+
+    <Button
+        android:id="@+id/btn_speech_activation_speak"
+        style="@style/appbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/speech_activation_speak" />
+
+    <Button
+        android:id="@+id/btn_speech_activation_write_nfc"
+        style="@style/appbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_speech_write_activation_tag" />
+    
+    <TextView
+        style="@style/apptext"
+        android:text="@string/speechActiviationControlHeading" />
+    
+    <Button
+        android:id="@+id/btn_speech_stop_service"
+        style="@style/appbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_speech_stop_service" />
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pref_speech_key">SpeechSettings</string>
+
+    <string name="pref_language">pref_language</string>
+    <string name="pref_language_title">Recognizer Language</string>
+    <string name="pref_language_default">en-US</string>
+
+    <string name="pref_maxresults">MaxResults</string>
+    <string name="pref_maxresults_title">Max Results</string>
+    <string name="pref_maxresults_default">100</string>
+
+    <string name="pref_partial">pref_parial</string>
+    <string name="pref_partial_title">Partial Results</string>
+    <string name="pref_partial_default">false</string>
+
+    <string name="pref_websearch">pref_websearch</string>
+    <string name="pref_websearch_title">Web Search</string>
+    <string name="pref_websearch_default">false</string>
+
+    <string name="pref_direct">pref_direct</string>
+    <string name="pref_direct_title">Use SpeechRecognizer</string>
+    <string name="pref_direct_default">false</string>
+    
+    <string name="pref_withpendingintent">pref_withpendingintent</string>
+    <string name="pref_withpendingintent_title">Pending intent for results</string>
+    <string name="pref_withpendingintent_default">false</string>
+
+    <string name="pref_complete_silence">pref_complete_silence</string>
+    <string name="pref_complete_silence_title">COMPLETE_SILENCE_LENGTH</string>
+    <string name="pref_complete_silence_default">@string/UNSET</string>
+
+    <string name="pref_minimum_input_length">pref_minimum_input_length</string>
+    <string name="pref_minimum_input_length_title">MINIMUM_LENGTH</string>
+    <string name="pref_minimum_input_length_default">@string/UNSET</string>
+
+    <string name="pref_possibly_complete_silence_length">pref_possibly_complete_silence_length</string>
+    <string name="pref_possibly_complete_silence_length_title">POSSIBLY_COMPLETE_SILENCE_LENGTH</string>
+    <string name="pref_possibly_complete_silence_length_default">@string/UNSET</string>
+
+	<string name="UNSET">-1</string>
+
+<!-- EXTRA_PARTIAL_RESULTS -->
+
+    <string name="pref_languagemodel">LanguageModel</string>
+    <string name="pref_languagemodel_title">Model free form</string>
+    <string name="pref_languagemodel_default">false</string>
+
+<!--     <string name="pref_languagemodel_options">@array/pref_languagemodel_options</string> -->
+<!--     <string name="pref_languagemodel_values">@array/pref_languagemodel_values</string> -->
+    
+<!--     <string name="pref_languagemodel_WEB_SEARCH">WEB_SEARCH</string> -->
+<!--     <string name="pref_languagemodel_FREE_FORM">FREE_FORM</string> -->
+    
+<!--     <array name="pref_languagemodel_options"> -->
+<!--     	<item>@string/pref_languagemodel_WEB_SEARCH</item> -->
+<!--     	<item>@string/pref_languagemodel_FREE_FORM</item> -->
+<!--     </array> -->
+
+    <string name="pref_match">pref_match</string>
+    <string name="pref_match_title">Matching Method</string>
+    <string name="pref_match_default">Strict</string>
+
+   <string name="pref_match_strict">Strict</string>
+   <string name="pref_match_stem">Strict</string>
+   <string name="pref_match_phonetic">Strict</string>
+       
+    <string-array name="pref_capacitive_backlight_entries">       
+        <item>Strict</item>
+        <item>Stem</item>
+        <item>Phonetic</item>
+    </string-array>
+    <string-array name="pref_capacitive_backlight_values">       
+        <item>Strict</item>
+        <item>Stem</item>
+        <item>Phonetic</item>
+    </string-array>
+
+    <array name="pref_languagemodel_values">
+    	<item>0</item>
+    	<item>1</item>
+    </array>
+
+	<!-- common -->    
+    <string name="pref_language">Language</string>
+    <string name="pref_language_title">Language</string>
+    <string name="pref_language_default">en-us</string>
+
+	<!-- tts -->
+	<string name="pref_tts_key">TtsSettings</string>
+	
+    <string name="pref_tts_speechrate">pref_tts_speechrate</string>
+    <string name="pref_tts_speechrate_title">Speech Rate</string>
+    <string name="pref_tts_speechrate_default">1.0</string>
+
+    <string name="pref_tts_queueaction">queueAction</string>
+    <string name="pref_tts_queueaction_title">Queue Flush</string>
+    <string name="pref_tts_queueaction_default">false</string>
+
+    <string name="pref_tts_customaudio">customaudio</string>
+    <string name="pref_tts_customaudio_title">\"android\" custom speech</string>
+    <string name="pref_tts_customaudio_default">true</string>
+
+    <string name="pref_tts_pitch">pitch</string>
+    <string name="pref_tts_pitch_title">Pitch</string>
+    <string name="pref_tts_pitch_default">1.0</string>
+
+    <string name="pref_tts_silencelength">silencelength</string>
+    <string name="pref_tts_silencelength_title">Silence Length (Ms)</string>
+    <string name="pref_tts_silencelength_default">1000</string>
+
+    <string name="pref_tts_tofile">pref_tts_tofile</string>
+    <string name="pref_tts_tofile_title">Synthesize to file</string>
+    <string name="pref_tts_tofile_default">false</string>
+
+    <string name="pref_tts_volume">pref_tts_volume</string>
+    <string name="pref_tts_volume_title">Volume</string>
+    <string name="pref_tts_volume_default">1.0</string>
+
+    <string name="pref_tts_pan">pref_tts_pan</string>
+    <string name="pref_tts_pan_title">Pan</string>
+    <string name="pref_tts_pan_default">0</string>
+
+    <string name="pref_tts_stream">pref_tts_stream</string>
+    <string name="pref_tts_stream_title">Audio Stream</string>
+    <integer name="pref_tts_stream_default">3</integer>
+
+    <string name="food_preferences_key">food_preferences_key</string>
+    <string name="food_preferences_lookup_key">food_lookup_preferences_key</string>
+        
+    <string name="pref_food_ordered">pref_food_ordered</string>
+    <string name="pref_food_ordered_title">Ordered</string>
+    <string name="pref_food_lucene">pref_food_lucene</string>
+    <string name="pref_food_lucene_title">Use lucene</string>
+    <string name="pref_food_or">pref_food_or</string>
+    <string name="pref_food_or_title">Or Query</string>
+    <string name="pref_food_prefix">pref_food_prefix</string>
+    <string name="pref_food_prefix_title">Prefix Query</string>
+    <string name="pref_food_phrase">pref_food_phrase</string>
+    <string name="pref_food_phrase_title">Phrase Query</string>
+
+    <string name="pref_food_or_default">true</string>
+    <string name="pref_food_default">false</string>
+    
+    <!-- audio -->
+    <string name="audio_clapper_preferences_key">audio_clapper_preferences_key</string>
+    
+    <!--  -->
+    <string name="audio_clapper_amplitude_difference">Phrase Query</string>
+    
+</resources>

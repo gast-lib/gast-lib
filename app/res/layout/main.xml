@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- TODO organize these buttons into sections -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/apptext"
+                android:text="@string/locationSectionHeading" />
+
+            <Button
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchGetCurrentLocationActivityClick"
+                android:text="@string/launchGetCurrentLocationActivityButtonText" />
+
+            <Button
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchTrackLocationActivityClick"
+                android:text="@string/launchTrackLocationActivityButtonText" />
+
+			<Button 
+	        	style="@style/appbuttoninlist"
+		        android:text="@string/launchProximityAlertActivityButtonText"
+		        android:onClick="onLaunchProximityAlertActivityClick" />
+
+            <TextView style="@style/line_separator" />
+
+            <TextView
+                style="@style/apptext"
+                android:text="@string/sensorSectionHeading" />
+
+            <Button
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchSensorListClick"
+                android:text="@string/launchSensorList" />
+
+            <Button
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchNorthFinderClick"
+                android:text="@string/launchNorthFinder" />
+            
+            <Button
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchDetermineOrientationClick"
+                android:text="@string/launchDetermineOrientation" />
+            
+            <Button
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchDetermineMovementClick"
+                android:text="@string/launchDetermineMovement" />
+            
+            <Button
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchDetermineAltitudeClick"
+                android:text="@string/launchDetermineAltitude" />
+
+            <TextView style="@style/line_separator" />
+
+            <TextView
+                style="@style/apptext"
+                android:text="@string/speechSectionHeading" />
+
+            <Button
+                android:id="@+id/btn_speechplay"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchSpeechPlay"
+                android:text="@string/launchSpeechRecognition" />
+
+            <Button
+                android:id="@+id/btn_magicword"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchMagicWord"
+                android:text="@string/launchMagicWord" />
+
+            <Button
+                android:id="@+id/btn_magicword_demo"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchMagicWordDemo"
+                android:text="@string/launchMagicWordDemo" />
+
+            <Button
+                android:id="@+id/btn_magicword_exec_demo"
+                style="@style/appbuttoninlist"
+                android:onClick="onlaunchMagicWordExecutor"
+                android:text="@string/launchMagicWordExecutorActivityName" />
+            
+            <Button
+                android:id="@+id/btn_food_dialog"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchFoodDialog"
+                android:text="@string/launchFoodDialog" />
+
+            <Button
+                android:id="@+id/btn_food_multi_dialog"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchMultiTurnFoodDialog"
+                android:text="@string/launchMultiTurnFoodDialog" />
+
+            <Button
+                android:id="@+id/btn_speech_serviceplay"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchSpeechActivationService"
+                android:text="@string/launchSpeechActivationService" />
+            
+            <Button
+                android:id="@+id/btn_speech_activaate_start_stop"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchSpeechActivationStartStop"
+                android:text="@string/launchSpeechActivationStartStop" />
+            
+            <TextView style="@style/line_separator" />
+
+            <TextView
+                style="@style/apptext"
+                android:text="@string/ttsSectionHeading" />
+
+            <Button
+                android:id="@+id/btn_ttsDemo"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchTextToSpeechDemo"
+                android:text="@string/launchTtsDemo" />
+
+            <Button
+                android:id="@+id/btn_ttsPlay"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchTextToSpeechPlay"
+                android:text="@string/launchTtsPlay" />
+
+            <Button
+                android:id="@+id/btn_ttsInfo"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchTextToSpeechInfo"
+                android:text="@string/launchTtsInfo" />
+
+            <TextView style="@style/line_separator" />
+
+            <TextView
+                style="@style/apptext"
+                android:text="@string/nfcSectionHeading" />
+
+            <Button
+                android:id="@+id/btn_nfc"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchNfc"
+                android:text="@string/launchNfc" />
+            
+            <Button
+                android:id="@+id/btn_nfc_peer"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchNfcPeer"
+                android:text="@string/launchNfcPeer" />
+            
+            <Button
+                android:id="@+id/btn_nfc_beam"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchNfcBeam"
+                android:text="@string/launchNfcBeam" />
+            
+            <TextView style="@style/line_separator" />
+
+            <TextView
+                style="@style/apptext"
+                android:text="@string/imageSectionHeading" />
+
+            <Button
+                android:id="@+id/btn_imageLiveCapture"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchLiveCapture"
+                android:text="@string/launchLiveCapture" />
+            
+            <Button
+                android:id="@+id/btn_imageLiveCapturePlus"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchLiveCapturePlus"
+                android:text="@string/launchLiveCapturePlus"/>
+
+            <Button
+                android:id="@+id/btn_imageSimpleCapture"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchSimpleCaptureActivity"
+                android:text="@string/launchSimpleCaptureActivity"/>
+            
+            <Button
+                android:id="@+id/btn_imageBarCode"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchImageBarcode"
+                android:text="@string/launchImageBarcode" />
+            
+            <Button
+                android:id="@+id/btn_launchImageDetectLogo"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchLaunchImageDetectLogo"
+                android:text="@string/launchImageDetectLogo"/>
+
+            <Button
+                android:id="@+id/btn_launchImageDetectLogoBetter"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchLaunchImageDetectLogoBetter"
+                android:text="@string/launchImageDetectLogoBetter"/>
+
+            <Button
+                android:id="@+id/btn_launchImageDetectLogoFaster"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchLaunchImageDetectLogoFaster"
+                android:text="@string/launchImageDetectLogoFaster"/>
+
+            <Button
+                android:id="@+id/btn_launchDetectFaces"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchDetectFaces"
+                android:text="@string/launchDetectFaces"/>
+
+            <TextView style="@style/line_separator" />
+            
+            <TextView
+                style="@style/apptext"
+                android:text="@string/audioSectionHeading" />
+
+            <Button
+                android:id="@+id/btn_clapper"
+                style="@style/appbuttoninlist"
+                android:onClick="onLaunchClapper"
+                android:text="@string/launchClapper" />
+            
+            </LinearLayout>
+    </ScrollView>
+    <!-- and the other sections follow -->
+
+</LinearLayout>

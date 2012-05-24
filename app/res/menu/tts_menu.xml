@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_ttsparam"
+	android:title="@string/menu_ttsparam" android:id="@+id/m_ttsparam"
+	android:orderInCategory="1" />
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_setlanguage"
+	android:title="@string/menu_setlanguage" android:id="@+id/m_setlanguage"
+	android:orderInCategory="2" />
+
+<item android:enabled="true" 
+	android:titleCondensed="@string/menu_setaudiostream"
+	android:title="@string/menu_setaudiostream" android:id="@+id/m_setaudiostream"
+	android:orderInCategory="3" />
+
+</menu>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+<!--     <style name="Theme.Gast" parent="@android:Theme"></style> -->
+<!--     <style name="Theme.Gast" parent="@android:style/Theme.Holo"></style> -->
+    
+	<style name="apptext">
+		<item name="android:textSize">12sp</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+
+	<style name="appspeechresulttext" parent="apptext">
+		<item name="android:textColor">@color/normal_black</item>
+	</style>
+
+	<style name="appbutton" parent="apptext">
+	</style>
+
+	<style name="dropdownbutton" parent="appbutton">
+		<item name="android:src">@drawable/arrow_down_float</item>
+		<item name="android:scaleType">center</item>
+	</style>
+
+	<style name="appbuttoninlist" parent="apptext">
+		<item name="android:padding">5dip</item>
+	</style>
+
+	<style name="line_separator">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">2dip</item>
+		<item name="android:color">@color/gray</item>
+		<item name="android:background">@color/gray</item>
+	</style>
+
+
+<!-- 	<style name="left_toolbar_fragment"> -->
+<!-- 		<item name="android:layout_width">150dip</item> -->
+<!-- 		<item name="android:layout_height">fill_parent</item> -->
+<!-- 		<item name="android:layout_alignParentLeft">true</item> -->
+<!-- 	</style> -->
+
+<!-- 	<style name="right_toolbar_fragment"> -->
+<!-- 		<item name="android:layout_width">150dip</item> -->
+<!-- 		<item name="android:layout_height">fill_parent</item> -->
+<!-- 		<item name="android:layout_alignParentRight">true</item> -->
+<!-- 	</style> -->
+<!-- 				<TextView -->
+<!-- 				android:layout_width="fill_parent" -->
+<!-- 				android:layout_height="1dip" -->
+<!-- 				android:background="@android:color/darker_gray"/> -->
+	
+
+</resources>

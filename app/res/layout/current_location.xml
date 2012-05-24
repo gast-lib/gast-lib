@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <TextView android:id="@+id/latitudeLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/latitudeLabel"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="4dip" />
+        
+    <TextView android:id="@+id/latitudeValue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@id/latitudeLabel" 
+        android:layout_toRightOf="@id/latitudeLabel" />
+        
+    <TextView android:id="@+id/longitudeLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/longitudeLabel"
+        android:layout_below="@id/latitudeLabel"
+        android:layout_marginRight="4dip" />
+        
+    <TextView android:id="@+id/longitudeValue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@id/longitudeLabel" 
+        android:layout_toRightOf="@id/longitudeLabel" />
+        
+    <TextView android:id="@+id/providerLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/providerLabel"
+        android:layout_below="@id/longitudeLabel"
+        android:layout_marginRight="4dip" />
+        
+    <TextView android:id="@+id/providerValue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@id/providerLabel" 
+        android:layout_toRightOf="@id/providerLabel" />
+        
+    <TextView android:id="@+id/accuracyLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/accuracyLabel"
+        android:layout_below="@id/providerLabel"
+        android:layout_marginRight="4dip" />
+        
+    <TextView android:id="@+id/accuracyValue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@id/accuracyLabel" 
+        android:layout_toRightOf="@id/accuracyLabel" />
+        
+    <TextView android:id="@+id/accuracyUnits"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/metersUnit"
+        android:layout_alignTop="@id/accuracyLabel" 
+        android:layout_toRightOf="@id/accuracyValue"
+        android:layout_marginLeft="4dip" />
+        
+    <TextView android:id="@+id/timeToFixLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/timeToFixLabel"
+        android:layout_below="@id/accuracyLabel"
+        android:layout_marginRight="4dip" />
+        
+    <TextView android:id="@+id/timeToFixValue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@id/timeToFixLabel" 
+        android:layout_toRightOf="@id/timeToFixLabel" />
+        
+    <TextView android:id="@+id/timeToFixUnits"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/secondsUnit"
+        android:layout_alignTop="@id/timeToFixLabel" 
+        android:layout_toRightOf="@id/timeToFixValue"
+        android:layout_marginLeft="4dip" />
+    
+    <TextView android:id="@+id/enabledProvidersLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/enabledProvidersLabel"
+        android:layout_below="@id/timeToFixLabel"
+        android:layout_marginRight="4dip" />
+        
+    <TextView android:id="@+id/enabledProvidersValue"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@id/enabledProvidersLabel" 
+        android:layout_toRightOf="@id/enabledProvidersLabel" />
+        
+    <Button android:id="@+id/changeLocationProviderSettings"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/changeLocationProviderSettingsText"
+        android:onClick="onChangeLocationProvidersSettingsClick"
+        android:layout_alignParentBottom="true" />
+    
+</RelativeLayout>

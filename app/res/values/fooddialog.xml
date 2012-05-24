@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="food_edit_prompt">Add &lt;food name&gt; or remove &lt;food name&gt;</string>
+    <string name="food_lookup_prompt">Say a fruit or vegetable</string>
+    <string name="food_lookup_result">%1$s has %2$s calories</string>
+    <string name="food_remove_failed">%1$s not removed</string>
+    <string name="food_remove_complete">removed %1$s</string>
+    <string name="food_remove_confirm_prompt">Are you sure you want to remove %1$s?</string>
+
+    
+    <array name="food_cancel">
+        <item>cancel</item>
+    </array>
+    <string name="food_cancelled">Cancelled.</string>
+    
+    <array name="food_add_command">
+        <item>add</item>
+    </array>
+    <array name="food_remove_command">
+        <item>remove</item>
+        <item>delete</item>
+    </array>
+    <string name="food_add_calories_prompt">How many calories for %1$s?</string>
+    <string name="food_add_result">added %1$s with %2$s calories.</string>
+    
+    <string name="food_compare_result">%1$s has more calories than %2$s</string>
+    <string name="food_compare_result_same">%1$s has the same calories as %2$s</string>
+    
+    <string name="food_edit_compare_prompt">Add &lt;food&gt; or remove &lt;food&gt; or &lt;food1&gt; &lt;food2&gt;</string>
+</resources>

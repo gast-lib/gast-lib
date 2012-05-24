@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    
+	<TextView 
+		style="@style/apptext"
+		android:id="@+id/tv_speechResultsSummary"
+        android:text=""
+	    android:layout_width="wrap_content" 
+        android:layout_gravity="center_vertical"/>
+
+	<ListView  
+		android:id="@+id/lv_resultlog"
+	    android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	android:background="@color/khaki"
+    	android:cacheColorHint="#00000000"
+	    />
+</LinearLayout>

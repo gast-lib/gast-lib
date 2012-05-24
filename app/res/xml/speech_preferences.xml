@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- digest this post: http://proandroiddev.blogspot.com/2011/04/honeycomb-tip-1-preferencefragment.html -->
+
+    <PreferenceCategory
+        android:key="@string/pref_speech_key"
+        android:title="Speech Settings" >
+
+        <ListPreference
+            android:defaultValue="20"
+            android:entries="@array/pref_capacitive_backlight_entries"
+            android:entryValues="@array/pref_capacitive_backlight_values"
+            android:key="@string/pref_match"
+            android:title="@string/pref_match_title" />
+
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_languagemodel_default"
+            android:key="@string/pref_languagemodel"
+            android:title="@string/pref_languagemodel_title" />
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_maxresults_default"
+            android:key="@string/pref_maxresults"
+            android:title="@string/pref_maxresults_title"/>
+
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_partial_default"
+            android:key="@string/pref_partial"
+            android:title="@string/pref_partial_title" />
+
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_websearch_default"
+            android:key="@string/pref_websearch"
+            android:title="@string/pref_websearch_title" />
+
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_direct_default"
+            android:key="@string/pref_direct"
+            android:title="@string/pref_direct_title" />
+        
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_withpendingintent_default"
+            android:key="@string/pref_withpendingintent"
+            android:title="@string/pref_withpendingintent_title" />
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_complete_silence_default"
+            android:key="@string/pref_complete_silence"
+            android:title="@string/pref_complete_silence_title" />
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_minimum_input_length_default"
+            android:key="@string/pref_minimum_input_length"
+            android:title="@string/pref_minimum_input_length_title" />
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_possibly_complete_silence_length_default"
+            android:key="@string/pref_possibly_complete_silence_length"
+            android:title="@string/pref_possibly_complete_silence_length_title" />
+        <!-- android:numeric="integer" -->
+    </PreferenceCategory>
+
+</PreferenceScreen>

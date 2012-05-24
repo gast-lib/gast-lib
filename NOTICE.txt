@@ -1,0 +1,25 @@
+Great Android Sensing Toolkit (GAST)
+Copyright 2012 Greg Milette & Adam Stroud
+
+This product contains software developed by Google and shared in the Android
+developer site.
+  http://developer.android.com
+
+Portions of the image processing codebase where derived from John's Java Imaging
+Library (JJIL).
+  http://code.google.com/p/jjil
+
+Parts of the graphic codebase were derived from the Android API demos.
+  http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/index.html.
+
+The AOA example was derived from the example provided by Google as part of the
+Android developer reference.
+  http://developer.android.com/guide/topics/usb/adk.html
+
+The high-pass filter algorithm used in AccelerationEventListener was derived
+from the Android developer documentation.
+  http://developer.android.com/reference/android/hardware/SensorEvent.html
+
+Portions of the NFC examples were derived from the StickyNotes example from
+the android developer reference.
+  http://nfc.android.com/StickyNotes.zip

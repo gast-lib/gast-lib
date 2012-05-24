@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="@string/audio_clapper_preferences_key"
+        android:title="Clapper Settings" >
+
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_food_default"
+            android:key="@string/pref_food_ordered"
+            android:title="@string/pref_food_ordered_title" />
+    </PreferenceCategory>
+        
+</PreferenceScreen>

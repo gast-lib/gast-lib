@@ -1,0 +1,47 @@
+Red apple,130
+Green apple,130
+Avocado,50
+Banana,110
+Cantaloupe,50
+Grapefruit,60
+Grapes,90
+Honeydew Melon,50
+Kiwifruit,90
+Lemon,15
+Lime,20
+Nectarine,60
+Orange,80
+Peach,60
+Pear,100
+Pineapple,50
+Plums,70
+Strawberries,50
+Sweet Cherries,100
+Tangerine,50
+Watermelon,80
+Red Concord Grapes,90
+Red grapes,90
+grape leaves,13
+orange-grapefruit juice,60
+Grape,90
+Red Grapefruit,60
+Asparagus,20
+Bell Pepper,25
+Broccoli,45
+Carrot,30
+Cauliflower,25
+Celery,15
+Cucumber,10
+Green Beans,20
+Green Cabbage,25
+Green Onion,10
+Iceberg Lettuce,10
+Leaf Lettuce,15
+Mushrooms,20
+Onion,45
+Potato,110
+Radishes,10
+Summer Squash,20
+Sweet Corn,90
+Sweet Potato,100
+Tomato,25

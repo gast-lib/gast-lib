@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="root.gast.playground"
+      android:versionCode="1"
+      android:versionName="1.0">
+      
+    <uses-sdk android:minSdkVersion="7" 
+        android:targetSdkVersion="15"/>
+        
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+    <uses-permission android:name="android.permission.NFC" />
+    
+	<application android:icon="@drawable/icon" 
+	    android:label="@string/app_name" 
+	    android:logo="@drawable/emptyone">
+        <activity android:name=".GastAppActivity"
+                  android:label="@string/activity_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".location.CurrentLocationActivity"
+            android:label="@string/launchGetCurrentLocationActivityButtonText"/>
+
+<!-- need stateHidden so your softkeyboard doesn't popup -->
+        <activity android:name=".speech.SpeechRecognitionPlay"
+                 android:windowSoftInputMode="stateHidden"
+                  android:label="@string/launchSpeechRecognitionActivityName"
+                 >
+        </activity>
+        <activity android:name=".pref.SummarizingEditPreferences"/>
+        <!-- a possible destination for the pending intent -->
+        <activity android:name=".speech.SpeechRecognitionResultsActivity" android:label="@string/SpeechRecognitionResultsActivityLabel"/>
+        
+        <activity android:name=".speech.SayMagicWordActivity" android:label="@string/launchMagicWordActivityName"/>
+        
+        <activity android:name=".speech.SayMagicWordDemo" android:label="@string/launchMagicWordActivityName"/>
+
+        <activity android:name=".speech.SpeechActivatorStartStop" android:label="@string/launchSpeechActivationStartStop"/>
+        
+        <activity android:name=".speech.SayMagicWordExecutorDemo" android:label="@string/launchMagicWordExecutorActivityName"/>
+        
+        <activity android:name=".speech.food.MultiTurnFoodDialogActivity" android:label="@string/launchMultiTurnFoodDialog"/>
+        
+        <activity android:name=".speech.food.FoodDialogPlay" android:label="@string/launchFoodDialog"/>
+
+        <activity android:name=".speech.food.FoodBrowser" android:label="@string/speechFoodBrowserName"/>
+        
+        <activity android:name=".speech.SpeechActivationServicePlay" android:label="@string/launchSpeechActivationService"/>
+        
+        <activity android:name=".speech.SpeechRecognitionLauncher" android:label="@string/eyesfree_speechlabel"/>
+        
+        
+        <activity android:name=".sensor.SensorListActivity" android:label="@string/launchSensorList"/>
+        
+        <activity android:name=".sensor.SensorDetails" android:label="@string/launchSensorList"/>
+
+        <activity android:name=".audio.ClapperPlay" android:label="@string/launchClapper"/>
+        
+        <activity android:name=".sensor.NorthFinder" android:label="@string/launchNorthFinder"/>
+        <activity android:name=".sensor.orientation.DetermineOrientationActivity"
+            android:label="@string/launchDetermineOrientation"/>
+        <activity android:name=".sensor.movement.DetermineMovementActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/launchDetermineMovement" />
+        
+        <activity android:name=".sensor.altitude.DetermineAltitudeActivity"
+            android:label="@string/launchDetermineAltitude" />
+        
+        <activity android:name=".speech.tts.TextToSpeechPlay"
+                 android:windowSoftInputMode="stateHidden"
+                 android:label="@string/TtsPlayActivityLabel">
+        </activity>
+        
+        <activity android:name=".speech.tts.TextToSpeechInfoActivity"
+        		 android:label="@string/tts_info_activity_title"
+                 android:windowSoftInputMode="stateHidden">
+        </activity>
+        
+        <activity android:name=".speech.tts.TextToSpeechDemo" />
+
+        <activity android:name=".speech.tts.TextToSpeechDemo" />
+        
+        <activity android:name="jjil.app.barcodereader.BarcodeReaderActivity" android:label="@string/launchImageBarcode"/>
+        <activity android:name="root.gast.playground.image.detectlogo.DetectLogoActivity" android:label="@string/launchImageDetectLogo"/>
+        <activity android:name="root.gast.playground.image.detectlogobetter.DetectLogoActivity" android:label="@string/launchImageDetectLogoBetter"/>
+        <activity android:name="root.gast.playground.image.detectlogofaster.DetectLogoActivity" android:label="@string/launchImageDetectLogoFaster"/>
+
+        <activity android:name="root.gast.playground.image.livecapture.LiveCaptureActivity" android:label="@string/launchLiveCapture"/>
+        <activity android:name="root.gast.playground.image.livecaptureplus.LiveCapturePlusActivity" android:label="@string/launchLiveCapturePlus"/>
+        <activity android:name="root.gast.playground.image.simplecapture.SimpleCaptureActivity" android:label="@string/launchSimpleCaptureActivity"/>
+        <activity android:name="root.gast.playground.image.detectfaces.DetectFacesActivity" android:label="@string/launchDetectFaces"/>
+        
+        <activity android:name=".speech.activation.util.TagWriterActivity" android:label="@string/labelWriteTag"/>
+        <activity android:name="root.gast.speech.activation.TagWriterExecutionActivityoid" android:label="@string/labelWriteTag"/>
+        
+        <activity android:name=".speech.activation.SpeechActivatorTagWriter" android:label="@string/labelWriteTag"/>
+        
+        <activity android:name="root.gast.playground.nfc.NFCInventoryActivity" 
+            android:launchMode="singleTask"
+            android:label="@string/launchNfc">
+<!--             
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+ -->
+            <!-- Handle NFC tags detected from outside our application -->
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/root.gast.playground.nfc" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="root.gast.playground.speech.activation.SpeechActivationNfcTagReceiver" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/root.gast.speech.activation" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:label="@string/launchNfcPeer"
+            android:name="root.gast.playground.nfc.Peer2PeerNFCInventoryActivity" >
+            <!--
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+  -->
+<!--             Handle NFC tags detected from outside our application  -->
+            <intent-filter >
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/root.gast.playground.nfc" />
+            </intent-filter>
+        </activity>
+
+                <activity
+            android:label="@string/launchNfcBeam"
+            android:name="root.gast.playground.nfc.BeamInventoryActivity" >
+            <!-- 
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+ -->
+<!--             Handle NFC tags detected from outside our application  -->
+            <intent-filter >
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/root.gast.playground.nfc" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".location.TrackLocationActivity" />
+
+		<activity android:name=".location.ProximityAlertActivity" />
+        <activity android:name=".location.GeocodeActivity" />
+        
+        <!-- AOA -->
+        <activity android:name=".sensor.aoa.BaseActivity" />
+        <activity android:name=".sensor.aoa.UsbAccessoryActivity"
+            android:taskAffinity=""
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+            </intent-filter>
+
+            <meta-data android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/accessory_filter" />
+        </activity>
+        
+        <receiver android:name=".location.TrackLocationBroadcastReceiver">
+            <intent-filter >
+                <action android:name="root.gast.playground.location.ACTION_LOCATION_CHANGED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- has 80 characters per line -->
+    <receiver 
+      android:name="root.gast.speech.tts.LanguageDataInstallBroadcastReceiver">
+      <intent-filter>
+            <action 
+             android:name="android.speech.tts.engine.TTS_DATA_INSTALLED"/>
+     </intent-filter>
+    </receiver>
+        
+        <service android:name="root.gast.speech.activation.SpeechActivationService"/>
+        
+        <service android:name="root.gast.speech.activation.SpeechActivationIntentService"/>
+
+        <receiver android:name=".speech.activation.ShowResultsSpeechActivationBroadcastReceiver">
+            <intent-filter >
+                <action android:name="root.gast.playground.speech.ACTIVATION"/>
+            </intent-filter>
+        </receiver>
+        
+        <uses-library android:name="com.google.android.maps" /> 
+    </application>
+</manifest>

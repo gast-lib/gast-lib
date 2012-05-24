@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+	<TextView 
+		style="@style/apptext"
+        android:text="@string/speechActiviationHeading"/>
+    
+	<LinearLayout 
+		android:id="@+id/ly_speechactivation"
+	    android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:weightSum="100"
+	>
+	
+	    <ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:id="@+id/vf_start_speak_flipper"
+	    android:layout_width="1dip" 
+	    android:layout_height="wrap_content"
+	    android:layout_weight="85"
+	    >
+	<!-- this button action could switch between various options -->
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_speak"
+	    android:layout_width="match_parent" 
+	    android:layout_height="wrap_content" 
+	    android:text="@string/btn_speak_label"
+    	/>
+	
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_stop_speak"
+	    android:layout_width="match_parent" 
+	    android:layout_height="wrap_content" 
+	    android:text="@string/btn_stop_speak_label"
+	    android:visibility="gone"
+    	/>
+	</ViewSwitcher>
+	
+	<ImageButton 
+		android:id="@+id/bt_speechActivation"
+		style="@style/dropdownbutton"
+	    android:layout_width="1dip" 
+	    android:layout_height="match_parent" 
+		android:layout_weight="15"
+		/>
+	</LinearLayout>
+
+	<!-- todo, add another combo button to change the activation method -->
+
+	<TextView style="@style/line_separator"/>	
+	<!-- an editable combo box -->
+
+	<TextView style="@style/line_separator"/>
+	<TextView 
+		style="@style/apptext"
+        android:text="@string/speechTargetHeading"/>
+
+	<!-- put the spinner next to it -->
+	<LinearLayout 
+		android:id="@+id/ly_speechtarget"
+	    android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:weightSum="100"
+	> 
+	<EditText android:id="@+id/et_speech_target"
+		style="@style/appbutton" 
+	    android:layout_width="1dip" 
+		android:layout_weight="85"
+	    android:layout_height="match_parent" 
+		>
+	</EditText>
+
+	<ImageButton 
+		android:id="@+id/bt_speechTargets"
+		style="@style/dropdownbutton"
+	    android:layout_width="1dip" 
+	    android:layout_height="match_parent" 
+		android:layout_weight="15"
+		/>
+	</LinearLayout>
+<!-- 		<requestFocus></requestFocus> -->
+
+<!-- 	<Spinner -->
+<!-- 		android:id="@+id/sp_speech_target_history"   -->
+<!-- 		style="@style/appbutton" -->
+<!-- 		android:entries="@array/default_speech_targets"/>	 -->
+
+	<TextView style="@style/line_separator"/>
+	
+	<RelativeLayout 
+		android:id="@+id/rl_resultsummary"
+	    android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+	> 
+	<TextView 
+		style="@style/apptext"
+		android:id="@+id/tv_speechResultsHeading"
+        android:text="@string/speechResultsHeading"
+	    android:layout_width="wrap_content" 
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dip"
+        />
+
+	<TextView 
+		style="@style/apptext"
+		android:id="@+id/tv_speechResultsSummary"
+        android:text=""
+	    android:layout_width="wrap_content" 
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@+id/tv_speechResultsHeading"/>
+    </RelativeLayout>
+
+	<ListView  
+		android:id="@+id/lv_resultlog"
+	    android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	android:background="@color/khaki"
+    	android:cacheColorHint="#00000000"
+	    />
+<!-- line separator -->
+</LinearLayout>

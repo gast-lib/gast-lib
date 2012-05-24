@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- GPS Altitude -->
+    <TextView android:id="@+id/gpsAltitudeSectionHeading"
+        style="@style/apptext"
+        android:text="@string/gpsAltitudeLabel"
+        android:layout_alignParentTop="true" />
+    
+    <TextView android:id="@+id/gpsAltitudeSectionDivider"
+        style="@style/line_separator"
+        android:layout_below="@id/gpsAltitudeSectionHeading" />
+    
+    <TextView android:id="@+id/gpsAltitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="@string/altitudeLabel"
+        android:layout_below="@id/gpsAltitudeSectionDivider"/>
+    
+    <TextView android:id="@+id/gpsAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/gpsAltitudeLabel"
+        android:layout_alignBottom="@id/gpsAltitudeLabel"
+        android:layout_toRightOf="@id/gpsAltitudeLabel"
+        android:text="@string/notAvailable"/>
+    
+    <TextView android:id="@+id/gpsRelativeAltitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="@string/relativeAltitudeLabel"
+        android:layout_below="@id/gpsAltitude"/>
+    
+    <TextView android:id="@+id/gpsRelativeAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/gpsRelativeAltitudeLabel"
+        android:layout_alignBottom="@id/gpsRelativeAltitudeLabel"
+        android:layout_toRightOf="@id/gpsRelativeAltitudeLabel"
+        android:text="@string/notAvailable"/>
+    
+    <!-- Standard Pressure Barometer Altitude -->
+    <TextView android:id="@+id/barometerAltitudeSectionHeading"
+        style="@style/apptext"
+        android:text="@string/barometerAltitudeLabel"
+        android:layout_below="@id/gpsRelativeAltitudeLabel"
+        android:layout_marginTop="10dip" />
+    
+    <TextView android:id="@+id/barometerAltitudeSectionDivider"
+        style="@style/line_separator"
+        android:layout_below="@id/barometerAltitudeSectionHeading" />
+    
+    <TextView android:id="@+id/barometerAltitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="@string/altitudeLabel"
+        android:layout_below="@id/barometerAltitudeSectionDivider"/>
+    
+    <TextView android:id="@+id/barometerAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/barometerAltitudeLabel"
+        android:layout_alignBottom="@id/barometerAltitudeLabel"
+        android:layout_toRightOf="@id/barometerAltitudeLabel"/>
+    
+    <TextView android:id="@+id/barometerRelativeAltitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="@string/relativeAltitudeLabel"
+        android:layout_below="@id/barometerAltitude"/>
+    
+    <TextView android:id="@+id/barometerRelativeAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/barometerRelativeAltitudeLabel"
+        android:layout_alignBottom="@id/barometerRelativeAltitudeLabel"
+        android:layout_toRightOf="@id/barometerRelativeAltitudeLabel"/>
+    
+    <TextView android:id="@+id/standardPressureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="@string/standardPressureLabel"
+        android:layout_below="@id/barometerRelativeAltitude"/>
+    
+    <TextView android:id="@+id/standardPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/standardPressureLabel"
+        android:layout_alignBottom="@id/standardPressureLabel"
+        android:layout_toRightOf="@id/standardPressureLabel"
+        android:text="@string/notAvailable"/>
+    
+    <!-- MSLP Barometer Altitude -->
+    <TextView android:id="@+id/mslpBarometerAltitudeSectionHeading"
+        style="@style/apptext"
+        android:text="@string/mslpBarometerAltitudeLabel"
+        android:layout_below="@id/standardPressureLabel"
+        android:layout_marginTop="10dip" />
+    
+    <TextView android:id="@+id/mslpBarometerAltitudeSectionDivider"
+        style="@style/line_separator"
+        android:layout_below="@id/mslpBarometerAltitudeSectionHeading" />
+    
+    <TextView android:id="@+id/mslpBarometerAltitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="@string/altitudeLabel"
+        android:layout_below="@id/mslpBarometerAltitudeSectionDivider"/>
+    
+    <TextView android:id="@+id/mslpBarometerAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/mslpBarometerAltitudeLabel"
+        android:layout_alignBottom="@id/mslpBarometerAltitudeLabel"
+        android:layout_toRightOf="@id/mslpBarometerAltitudeLabel"
+        android:text="@string/notAvailable"/>
+    
+    <TextView android:id="@+id/mslpRelativeAltitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="@string/relativeAltitudeLabel"
+        android:layout_below="@id/mslpBarometerAltitude"/>
+    
+    <TextView android:id="@+id/mslpBarometerRelativeAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/mslpRelativeAltitudeLabel"
+        android:layout_alignBottom="@id/mslpRelativeAltitudeLabel"
+        android:layout_toRightOf="@id/mslpRelativeAltitudeLabel"
+        android:text="@string/notAvailable"/>
+    
+    <TextView android:id="@+id/mslpLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="@string/mslpLabel"
+        android:layout_below="@id/mslpBarometerRelativeAltitude"/>
+    
+    <TextView android:id="@+id/mslp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/mslpLabel"
+        android:layout_alignBottom="@id/mslpLabel"
+        android:layout_toRightOf="@id/mslpLabel"
+        android:text="@string/notAvailable"/>
+    
+    <ToggleButton 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mslpLabel"
+        android:onClick="onToggleClick"
+        android:textOff="Mark Starting Altitude"
+        android:textOn="Compute Relative Altitude" />
+    
+</RelativeLayout>

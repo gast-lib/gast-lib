@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="12"
+>
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_food_edit"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="6"
+	    android:text="@string/btn_food_edit_label"
+    	/>
+
+	<Button
+		style="@style/appbutton"
+		android:id="@+id/btn_food_lookup"
+	    android:layout_width="0dip"
+	    android:layout_height="wrap_content" 
+	    android:layout_weight="6"
+	    android:text="@string/btn_food_lookup_label"
+    	/>
+
+</LinearLayout>
+
+	<TextView style="@style/line_separator"/>
+	
+	<TextView
+		android:id="@+id/tv_resultlog_heading"
+        style="@style/apptext"
+        android:text="@string/speechMultiFoodResultHeading"/>
+	
+	<ScrollView
+		android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	android:background="@color/khaki"
+		>
+	<TextView 
+		style="@style/apptext"
+		android:id="@+id/tv_resultlog"
+        android:text=""
+	    android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	android:background="@color/khaki"
+    	android:textColor="@android:color/black"/>
+	</ScrollView>
+</LinearLayout>
