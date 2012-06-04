@@ -33,8 +33,7 @@ workspace that has the ability to run the examples with very little
 
 Note: The directory names located on the filesystem DO NOT match the names of
 the projects. The filesystem directory names are located in the above list in
-parentheses where root ("/") is the directory that was created by expanding the
-.zip file.
+parentheses where root ("/") is the main directory.
 
 ##  Projects
 
