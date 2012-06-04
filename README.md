@@ -13,8 +13,8 @@ By sensors, we mean:
 
 GAST provides code for the following capabilities:
 
-- Location sensors: sensors related to the LocationProvider API 
-- Physical sensors: all sensors in SensorManager API such as the ones that detect device specific properties such as orientation, acceleration, and rotationand environmental properties such as light, magnetic fi eld, and barometric pressure.
+* Location sensors: sensors related to the LocationProvider API 
+* Physical sensors: all sensors in SensorManager API such as the ones that detect device specific properties such as orientation, acceleration, and rotationand environmental properties such as light, magnetic fi eld, and barometric pressure.
 * External sensors: Any sensor connected using the Android Open Accessory (AOA) mechanism.
 * NFC
 * Camera
@@ -24,7 +24,7 @@ GAST provides code for the following capabilities:
 
 ## Documentation
 
-+ [Setup](/Setup/)
++ [Setup](https://github.com/gast-lib/gast-lib/blob/master/Setup.md)
 * (More to come)
 
 ## Learn more
@@ -33,11 +33,11 @@ GAST provides code for the following capabilities:
 + Download the app: [Android Sensor Playground](https://play.google.com/store/apps/details?id=root.gast.playground)
 
 ## Contact
-+ [Email](mailto::gastlib@gmail.com)
++ [Email](mailto:gastlib@gmail.com)
 + [Github](https://github.com/gast-lib)
 + [Wrox Programmer Forums](http://p2p.wrox.com/)
-+ [gastlib Google Group]([http://groups.google.com/group/gastlib](http://groups.google.com/group/gastlib)
++ [gastlib Google Group](http://groups.google.com/group/gastlib)
 
 ## License
 
-All the code is licensed under the Apache 2.0 license. See LICENSE.txt for license details.
+All the code is licensed under the Apache 2.0 license. See [LICENSE.txt](https://github.com/gast-lib/gast-lib/blob/master/LICENSE.txt) for license details.
