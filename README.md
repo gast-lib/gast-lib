@@ -13,8 +13,8 @@ By sensors, we mean:
 
 GAST provides code for the following capabilities:
 
-- Location sensors: sensors related to the LocationProvider API 
-- Physical sensors: all sensors in SensorManager API such as the ones that detect device specific properties such as orientation, acceleration, and rotationand environmental properties such as light, magnetic fi eld, and barometric pressure.
+* Location sensors: sensors related to the LocationProvider API 
+* Physical sensors: all sensors in SensorManager API such as the ones that detect device specific properties such as orientation, acceleration, and rotationand environmental properties such as light, magnetic fi eld, and barometric pressure.
 * External sensors: Any sensor connected using the Android Open Accessory (AOA) mechanism.
 * NFC
 * Camera

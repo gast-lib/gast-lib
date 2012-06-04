@@ -2,10 +2,9 @@
 
 ## Software Requirements
 
-The code was developed using the Eclipse IDE which is freely available from
-http://www.eclipse.org. In addition to eclipse, the Android SDK and Android
+The code was developed using the Eclipse IDE which is freely available from [http://www.eclipse.org](http://www.eclipse.org). In addition to eclipse, the Android SDK and Android
 developer's toolkit (ADT) will also need to be installed. See
-http://developer.android.com/sdk/index.html for instructions on installing the
+[http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html) for instructions on installing the
 Android SDK and the ADT.
 
 ##  Setup
@@ -56,15 +55,14 @@ previous section, as well as which chapters in the book reference the code:
   It has minimal dependencies so you can include only this project in your app.
   It has code for various chapters in the book.
 
-* jjil - A clone of Jon's Java Imaging Library (http://code.google.com/p/jjil/) 
-  with some updates for this book. It has code for chapters 12 and 13.
+* jjil - A clone of Jon's Java Imaging Library [http://code.google.com/p/jjil/](http://code.google.com/p/jjil/) 
+  with some updates for this book.
 
-* JJIL-Android - Another project from http://code.google.com/p/jjil/ with some 
-  updates for this book. It has code for chapters 12 and 13.
+* JJIL-Android - Another project from [http://code.google.com/p/jjil/](http://code.google.com/p/jjil/) with some 
+  updates for this book.
 
 * openaccessory - Contains the code for Android Open Accessory (AOA). 
-  It has code for chapter 10.
-
+ 
 ## Package Structure
 
 The packages in GastApp are organized by sensor type and two categories:
@@ -72,25 +70,20 @@ The packages in GastApp are organized by sensor type and two categories:
  * root.gast.playground.<sensor type> are from GastApp
  * root.gast.<sensor type> are packages from other projects.
 
-When you are looking for code for a particular chapter of Professional Android Sensor Programming
-or sensor look for the
+When you are looking for code for a particular chapter of [Professional Android Sensor Programming](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118183487.html) or sensor look for the
 package with the appropriate sensor type.
+
 * Part 1: root.gast.playground.location
+
 * Part 2: root.gast.playground.sensor
+
 * Chapter 10: com.example.temperaturesensor (in the openaccessory folder)
+
 * Chapter 11: root.gast.playground.nfc
+
 * Chapter 12,13: root.gast.playground.image
+
 * Chapter 14: root.gast.playground.audio
+
 * Part 4: root.gast.playground.speech
 
-================================================================================
- Contact
-================================================================================
-
-We hope this code helps you understand how to use sensors and helps you get
-started using them. 
-
-To contact the authors:
-Email: gastlib@gmail.com
-Github: https://github.com/gast-lib
-Wrox Programmer Forums: http://p2p.wrox.com/
