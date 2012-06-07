@@ -10,7 +10,7 @@ GAST has a framework for collecting and analyzing audio data. It currently suppo
 
 ## Collect and analyze audio data
 
-- Collect using AsyncTasks like [this](https://github.com/gast-lib/gast-lib/blob/maste r/app/src/root/gast/playground/audio/RecordAudioTask.java) and [this](https://github.com/gast-lib/gast-lib/blob/master/app/src/root/gast/playground/audio/RecordAmplitudeTask.java)
+- Collect using AsyncTasks like [this](https://github.com/gast-lib/gast-lib/blob/master/app/src/root/gast/playground/audio/RecordAudioTask.java) and [this](https://github.com/gast-lib/gast-lib/blob/master/app/src/root/gast/playground/audio/RecordAmplitudeTask.java)
 
 - Analyze the data by implementing a listener. Gast has some listeners that implement various kinds of [clappers](https://github.com/gast-lib/gast-lib/tree/master/library/src/root/gast/audio/interp)
 
