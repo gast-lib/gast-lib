@@ -25,6 +25,7 @@ GAST provides code for the following capabilities:
 ## Documentation
 
 + [Setup](https://github.com/gast-lib/gast-lib/blob/master/Setup.md)
++ [Audio Processing](https://github.com/gast-lib/gast-lib/blob/master/audio.md)
 * (More to come)
 
 ## Learn more
