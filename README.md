@@ -25,6 +25,7 @@ GAST provides code for the following capabilities:
 ## Documentation
 
 + [Setup](https://github.com/gast-lib/gast-lib/blob/master/Setup.md)
++ [Speech Recognition and Text-to-Speech](https://github.com/gast-lib/gast-lib/blob/master/speech.md)
 + [Audio Processing](https://github.com/gast-lib/gast-lib/blob/master/audio.md)
 * (More to come)
 
