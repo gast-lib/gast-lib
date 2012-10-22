@@ -17,14 +17,14 @@ package root.gast.playground.speech.visitor;
 
 import org.apache.commons.codec.language.Soundex;
 
+import root.gast.speech.text.match.SoundsLikeWordMatcher;
+
 /**
  * mark soundex matches with a &
  * @author Greg Milette &#60;<a href="mailto:gregorym@gmail.com">gregorym@gmail.com</a>&#62;
  */
 public class MatchesTargetVisitorSoundex extends MatchesTargetVisitor
 {
-    private Soundex soundex;    
-
     public MatchesTargetVisitorSoundex(String target)
     {
         super(target);
@@ -39,11 +39,9 @@ public class MatchesTargetVisitorSoundex extends MatchesTargetVisitor
     @Override
     protected String encode(String toEncode)
     {
-        if (soundex == null)
-        {
-            soundex = new Soundex();
-        }
-        return soundex.soundex(toEncode);
+        //encodes it
+        SoundsLikeWordMatcher matcher = new SoundsLikeWordMatcher(toEncode);
+        return matcher.getWords().iterator().next();
     }
 
 }

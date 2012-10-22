@@ -62,7 +62,17 @@ public class SoundsLikeWordMatcher extends WordMatcher
 
     private static String encode(String in)
     {
-        return soundex.encode(in);
+        String encoded = in;
+        try
+        {
+            encoded = soundex.encode(in);
+        }
+        catch (IllegalArgumentException e)
+        {
+            //for weird characters that soundex doesn't understand
+            
+        }
+        return encoded;
     }
 }
 
