@@ -44,7 +44,6 @@ public class RecognitionIndexer extends Analyzer
         {
             stem = new EnglishMinimalStemFilter(lower);
             filter = stem;
-            Log.d(TAG, "do stem");
         }
 
         if (phonetic)
