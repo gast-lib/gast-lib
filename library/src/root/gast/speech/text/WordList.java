@@ -28,8 +28,8 @@ public class WordList
     
     public WordList(String source)
     {
-        this.source = source;
-        words = source.split("\\s");
+        this.source = source.toLowerCase();
+        words = this.source.split("\\s");
     }
 
     public String getStringAfter(int wordIndex)
