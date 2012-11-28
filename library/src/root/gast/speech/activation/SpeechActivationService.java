@@ -16,6 +16,7 @@
 package root.gast.speech.activation;
 
 import root.gast.R;
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -36,6 +37,8 @@ public class SpeechActivationService extends Service implements
         SpeechActivationListener
 {
     private static final String TAG = "SpeechActivationService";
+    public static final String NOTIFICATION_ICON_RESOURCE_INTENT_KEY =
+        "NOTIFICATION_ICON_RESOURCE_INTENT_KEY";
     public static final String ACTIVATION_TYPE_INTENT_KEY =
             "ACTIVATION_TYPE_INTENT_KEY";
     public static final String ACTIVATION_RESULT_INTENT_KEY =
@@ -124,11 +127,17 @@ public class SpeechActivationService extends Service implements
 
     private void startDetecting(Intent intent)
     {
+        Log.d(TAG, "extras: " + intent.getExtras().toString());
+        if (activator == null)
+        {
+            Log.d(TAG, "null activator");
+        }
+            
         activator = getRequestedActivator(intent);
         Log.d(TAG, "started: " + activator.getClass().getSimpleName());
         isStarted = true;
         activator.detectActivation();
-        startForeground(NOTIFICATION_ID, getNotification());
+        startForeground(NOTIFICATION_ID, getNotification(intent));
     }
 
     private SpeechActivator getRequestedActivator(Intent intent)
@@ -194,7 +203,8 @@ public class SpeechActivationService extends Service implements
         }
     }
 
-    private Notification getNotification()
+    @SuppressLint("NewApi")
+    private Notification getNotification(Intent intent)
     {
         // determine label based on the class
         String name = SpeechActivatorFactory.getLabel(this, activator);
@@ -207,11 +217,13 @@ public class SpeechActivationService extends Service implements
                 PendingIntent.getService(this, 0, makeServiceStopIntent(this),
                         0);
 
+        int icon = intent.getIntExtra(NOTIFICATION_ICON_RESOURCE_INTENT_KEY, R.drawable.icon);
+
         Notification notification;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
         {
             Notification.Builder builder = new Notification.Builder(this);
-            builder.setSmallIcon(R.drawable.icon)
+            builder.setSmallIcon(icon)
                     .setWhen(System.currentTimeMillis()).setTicker(message)
                     .setContentTitle(title).setContentText(message)
                     .setContentIntent(pi);
@@ -220,7 +232,7 @@ public class SpeechActivationService extends Service implements
         else
         {
             notification =
-                    new Notification(R.drawable.icon, message,
+                    new Notification(icon, message,
                             System.currentTimeMillis());
             notification.setLatestEventInfo(this, title, message, pi);
         }
