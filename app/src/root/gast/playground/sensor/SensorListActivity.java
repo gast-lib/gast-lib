@@ -15,7 +15,7 @@
  */
 package root.gast.playground.sensor;
 
-import root.gast.R;
+import root.gast.playground.R;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 

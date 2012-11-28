@@ -7,8 +7,6 @@
     <!-- location -->
     <string name="locationSectionHeading">Location Services</string>
     <string name="launchGetCurrentLocationActivityButtonText">Get Current Location</string>
-    <string name="latitudeLabel">Latitude:</string>
-    <string name="longitudeLabel">Longitude:</string>
     <string name="providerLabel">Provider:</string>
     <string name="accuracyLabel">Accuracy:</string>
     <string name="timeToFixLabel">Time to Fix:</string>
@@ -153,7 +151,6 @@
     <string name="speechActivationHeading">Select speech activation method</string>
     <string name="speechResultsHeading">Results: </string>
     <string name="speechNotAvailableMessage">Speech recognition not supported on this device</string>
-    <string name="speechActiviationHeading">Activation</string>
     <string name="SpeechRecognitionResultsActivityLabel">Speech Recognition Results</string>
     <string name="speechRecognitionFailed">Did not understand, please try again</string>
     <string name="speechMultiFoodResultHeading">Recognition Results</string>
@@ -272,13 +269,8 @@
     <string name="no_device">Please connect the accessory.</string>
 
     <string name="set_parameters_failed">Set parameters failed: </string>
-    
-    <!-- audio -->
-    <string name="audio_start_clapper">Start Clapper</string>
-    <string name="audio_stop_clapper">Stop Clapper</string>
-    <string name="audio_magnitude_label">Max Amplitude</string>
     	
-        <!-- audio -->
+    <!-- audio -->
     <string name="audio_start_clapper">Start Clapper</string>
     <string name="audio_stop_clapper">Stop</string>
     <string name="audio_stop_clapper_all">Stop Recording</string>

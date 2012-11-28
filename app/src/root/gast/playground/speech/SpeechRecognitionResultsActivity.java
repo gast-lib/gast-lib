@@ -17,7 +17,7 @@ package root.gast.playground.speech;
 
 import java.util.List;
 
-import root.gast.R;
+import root.gast.playground.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;

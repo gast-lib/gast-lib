@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <string name="app_name">AllSensors</string>
    <string name="details">Sensor Details</string>
    <string name="change_rate">Change Rate</string>
 </resources>

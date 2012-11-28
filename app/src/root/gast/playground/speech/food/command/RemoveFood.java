@@ -137,8 +137,8 @@ public class RemoveFood implements VoiceActionCommand
                 @Override
                 public void notUnderstood(List<String> heard, int reason)
                 {
-                    String toSayCancelled = context.getResources().getString(
-                            R.string.voiceaction_cancelled_response);
+                    String toSayCancelled =
+                    		context.getString(R.string.voiceaction_cancelled_response);
                     executor.speak(toSayCancelled);
                 }
             });

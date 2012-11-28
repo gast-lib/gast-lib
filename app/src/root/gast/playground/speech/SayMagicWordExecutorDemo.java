@@ -17,7 +17,7 @@ package root.gast.playground.speech;
 
 import java.util.List;
 
-import root.gast.R;
+import root.gast.playground.R;
 import root.gast.speech.SpeechRecognizingAndSpeakingActivity;
 import root.gast.speech.tts.TextToSpeechStartupListener;
 import root.gast.speech.voiceaction.AbstractVoiceAction;

@@ -3,9 +3,10 @@ package root.gast.playground.speech.tts;
 import java.util.HashMap;
 import java.util.Locale;
 
-import root.gast.R;
+import root.gast.playground.R;
 import root.gast.speech.tts.TextToSpeechInitializer;
 import root.gast.speech.tts.TextToSpeechStartupListener;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -17,7 +18,6 @@ import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
 /**
  * A simple app to demonstrate a barebones usecase for playing a simple text to
  * speech sound
@@ -90,7 +90,8 @@ public class TextToSpeechDemo extends Activity implements
      * set the TTS listener to call {@link #onDone(String)} depending on the
      * Build.Version.SDK_INT
      */
-    private void setTtsListener()
+    @SuppressLint("NewApi")
+	private void setTtsListener()
     {
         if (Build.VERSION.SDK_INT >= 15)
         {

@@ -19,11 +19,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import root.gast.R;
+import root.gast.playground.R;
 import root.gast.speech.SpeechRecognitionUtil;
 import root.gast.speech.SpeechRecognizingActivity;
 import root.gast.speech.tts.TextToSpeechInitializer;
 import root.gast.speech.tts.TextToSpeechStartupListener;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -93,14 +94,14 @@ public class SayMagicWordDemo extends SpeechRecognizingActivity implements
      * set the TTS listener to call {@link #onDone(String)} depending on the
      * Build.Version
      */
-    private void setTtsListener()
+    @SuppressLint("NewApi")
+	private void setTtsListener()
     {
         final SayMagicWordDemo callWithResult = this;
         if (Build.VERSION.SDK_INT >= 15)
         {
             int listenerResult =
-                    tts.setOnUtteranceProgressListener(
-                            new UtteranceProgressListener()
+                    tts.setOnUtteranceProgressListener(new UtteranceProgressListener()
                     {
                         @Override
                         public void onDone(String utteranceId)

@@ -21,7 +21,7 @@ import java.util.Locale;
 
 import org.apache.commons.codec.language.Soundex;
 
-import root.gast.R;
+import root.gast.playground.R;
 import root.gast.playground.pref.PreferenceHelper;
 import root.gast.playground.pref.SummarizingEditPreferences;
 import root.gast.playground.speech.activation.SpeechActivatorTagWriter;

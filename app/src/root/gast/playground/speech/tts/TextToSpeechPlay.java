@@ -12,12 +12,11 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import root.gast.R;
+import root.gast.playground.R;
 import root.gast.playground.pref.PreferenceHelper;
 import root.gast.playground.pref.SummarizingEditPreferences;
 import root.gast.playground.util.DialogGenerator;
 import root.gast.playground.util.FileUtil;
-import root.gast.speech.tts.CommonTtsMethods;
 import root.gast.speech.tts.TextToSpeechInitializer;
 import root.gast.speech.tts.TextToSpeechStartupListener;
 import root.gast.speech.tts.TextToSpeechUtils;
@@ -99,10 +98,10 @@ public class TextToSpeechPlay extends Activity implements TextToSpeechStartupLis
         try
         {
             EXTERNAL_STORAGE_DIR = getExternalFilesDir(OUTPUT_DIR).getAbsolutePath();
-        } catch (Exception e)
+        }
+        catch (Exception e)
         {
-            Log.e(TAG, "the external storate isn't available, continue anyway",
-                    e);
+            Log.e(TAG, "the external storate isn't available, continue anyway", e);
         }
         preferences =
                 new PreferenceHelper(getResources().getString(

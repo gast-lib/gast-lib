@@ -18,7 +18,7 @@ package root.gast.playground.speech.tts;
 import java.util.List;
 import java.util.Locale;
 
-import root.gast.R;
+import root.gast.playground.R;
 import root.gast.playground.util.DialogGenerator;
 import root.gast.speech.tts.CommonTtsMethods;
 import root.gast.speech.tts.TextToSpeechInitializer;

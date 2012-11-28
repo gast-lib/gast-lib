@@ -15,7 +15,7 @@
  */
 package root.gast.playground.location;
 
-import root.gast.R;
+import root.gast.playground.R;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;

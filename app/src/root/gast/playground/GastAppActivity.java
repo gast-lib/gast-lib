@@ -16,7 +16,6 @@
 
 package root.gast.playground;
 
-import root.gast.R;
 import root.gast.playground.audio.ClapperPlay;
 import root.gast.playground.image.detectfaces.DetectFacesActivity;
 import root.gast.playground.image.livecapture.LiveCaptureActivity;

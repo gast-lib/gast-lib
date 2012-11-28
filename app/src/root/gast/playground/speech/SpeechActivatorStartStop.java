@@ -15,7 +15,7 @@
  */
 package root.gast.playground.speech;
 
-import root.gast.R;
+import root.gast.playground.R;
 import root.gast.speech.activation.MovementActivator;
 import root.gast.speech.activation.SpeechActivationListener;
 import root.gast.speech.activation.SpeechActivator;

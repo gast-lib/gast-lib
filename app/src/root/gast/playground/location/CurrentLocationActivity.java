@@ -17,7 +17,7 @@ package root.gast.playground.location;
 
 import java.util.List;
 
-import root.gast.R;
+import root.gast.playground.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.location.Criteria;
@@ -38,8 +38,7 @@ import android.widget.TextView;
  * @author Adam Stroud &#60;<a
  *         href="mailto:adam.stroud@gmail.com">adam.stroud@gmail.com</a>&#62;
  */
-public class CurrentLocationActivity extends Activity implements
-        LocationListener
+public class CurrentLocationActivity extends Activity implements LocationListener
 {
 
     private LocationManager locationManager;
@@ -91,8 +90,8 @@ public class CurrentLocationActivity extends Activity implements
                 stringBuffer.append(enabledProvider).append(" ");
                 
                 locationManager.requestSingleUpdate(enabledProvider,
-                        this,
-                        null);
+                                                    this,
+                                                    null);
             }
             
             enabledProvidersValue.setText(stringBuffer);

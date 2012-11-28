@@ -17,7 +17,7 @@ package root.gast.playground.pref;
 
 import java.util.Locale;
 
-import root.gast.R;
+import root.gast.playground.R;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;

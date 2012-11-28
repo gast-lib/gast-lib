@@ -3,10 +3,6 @@
 
     <string name="pref_speech_key">SpeechSettings</string>
 
-    <string name="pref_language">pref_language</string>
-    <string name="pref_language_title">Recognizer Language</string>
-    <string name="pref_language_default">en-US</string>
-
     <string name="pref_maxresults">MaxResults</string>
     <string name="pref_maxresults_title">Max Results</string>
     <string name="pref_maxresults_default">100</string>
