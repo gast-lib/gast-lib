@@ -388,22 +388,6 @@ public class SensorDisplayFragment extends Fragment implements SensorEventListen
         zAxis.setVisibility(View.GONE);
     }
 
-    @Override
-    public void onHiddenChanged(boolean hidden)
-    {
-        super.onHiddenChanged(hidden);
-        
-        if (hidden)
-        {
-            if (BuildConfig.DEBUG)
-            {
-                Log.d(TAG, "Unregistering listener");
-            }
-            
-            sensorManager.unregisterListener(this);
-        }
-    }
-
     /**
      * @see android.support.v4.app.Fragment#onPause()
      */
@@ -414,7 +398,6 @@ public class SensorDisplayFragment extends Fragment implements SensorEventListen
         
         if (BuildConfig.DEBUG)
         {
-            Log.d(TAG, "onPause");
             Log.d(TAG, "Unregistering listener");
         }
         
