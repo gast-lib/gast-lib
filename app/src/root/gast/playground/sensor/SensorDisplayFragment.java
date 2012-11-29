@@ -17,6 +17,7 @@ package root.gast.playground.sensor;
 
 import root.gast.playground.BuildConfig;
 import root.gast.playground.R;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -30,6 +31,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Displays the details of a sensor.
@@ -70,10 +72,9 @@ public class SensorDisplayFragment extends Fragment implements SensorEventListen
     private TextView cos;
     
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState)
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {
-        View layout = inflater.inflate(R.layout.sensor_view, null);
+        View layout = inflater.inflate(R.layout.fragment_sensor_display, null);
         
         sensorManager =
                 (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
@@ -153,27 +154,50 @@ public class SensorDisplayFragment extends Fragment implements SensorEventListen
         return layout;
     }
     
-    public void displaySensor(Sensor sensor)
+    @SuppressLint("NewApi")
+	public void displaySensor(int sensorType, String sensorName)
     {
-        if (BuildConfig.DEBUG)
+    	// Unregister from previous sensor...if there is one
+    	if (sensor != null)
+    	{
+    		sensorManager.unregisterListener(this);
+    	}
+    	
+        for (Sensor sensor : sensorManager.getSensorList(sensorType))
         {
-            Log.d(TAG, "display the sensor");
+        	if (sensor.getName().equals(sensorName))
+        	{
+        		this.sensor = sensor;
+        		break;
+        	}
         }
         
-        this.sensor = sensor;
-        
-        name.setText(sensor.getName());
-        type.setText(String.valueOf(sensor.getType()));
-        maxRange.setText(String.valueOf(sensor.getMaximumRange()));
-        minDelay.setText(String.valueOf(sensor.getMinDelay()));
-        power.setText(String.valueOf(sensor.getPower()));
-        resolution.setText(String.valueOf(sensor.getResolution()));
-        vendor.setText(String.valueOf(sensor.getVendor()));
-        version.setText(String.valueOf(sensor.getVersion()));
-        
-        sensorManager.registerListener(this,
-                sensor,
-                SensorManager.SENSOR_DELAY_NORMAL);
+        if (sensor == null)
+        {
+        	Toast.makeText(getActivity(), "Invalid sensor selected", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+        	if (BuildConfig.DEBUG)
+            {
+                Log.d(TAG, String.format("display sensor; type = %d, name = %s",
+                		                 sensor.getType(),
+                		                 sensor.getName()));
+            }
+        	
+            name.setText(sensor.getName());
+            type.setText(String.valueOf(sensor.getType()));
+            maxRange.setText(String.valueOf(sensor.getMaximumRange()));
+            minDelay.setText(String.valueOf(sensor.getMinDelay()));
+            power.setText(String.valueOf(sensor.getPower()));
+            resolution.setText(String.valueOf(sensor.getResolution()));
+            vendor.setText(String.valueOf(sensor.getVendor()));
+            version.setText(String.valueOf(sensor.getVersion()));
+            
+            sensorManager.registerListener(this,
+                                          sensor,
+                                          SensorManager.SENSOR_DELAY_NORMAL);
+        }
     }
 
     /**
@@ -364,9 +388,6 @@ public class SensorDisplayFragment extends Fragment implements SensorEventListen
         zAxis.setVisibility(View.GONE);
     }
 
-    /**
-     * @see android.support.v4.app.Fragment#onHiddenChanged(boolean)
-     */
     @Override
     public void onHiddenChanged(boolean hidden)
     {

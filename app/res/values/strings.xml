@@ -135,6 +135,7 @@
     
     <!-- Sensors -->
     <string name="launchSensorList">Sensor List</string>
+    <string name="launchSensorDisplay">Sensor Details</string>
     <string name="launchNorthFinder">North Finder</string>
     <string name="launchDetermineOrientation">Determine Orientation</string>
     <string name="launchDetermineMovement">Determine Movement</string>

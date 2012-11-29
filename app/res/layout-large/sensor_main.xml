@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
    android:layout_width="fill_parent"
-   android:layout_height="fill_parent">
+   android:layout_height="fill_parent"
+   android:orientation="horizontal">
     <fragment
         android:id="@+id/sensorListFragment"
-        android:layout_width="fill_parent"
+        android:layout_width="300dp"
         android:layout_height="fill_parent"
         class="root.gast.playground.sensor.SensorListFragment" />
+
+    <fragment
+        android:id="@+id/sensorDisplayFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        class="root.gast.playground.sensor.SensorDisplayFragment" />
 </LinearLayout>

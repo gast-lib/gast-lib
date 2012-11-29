@@ -22,7 +22,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,27 +31,40 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 /**
- * @author Greg Milette &#60;<a
- *         href="mailto:gregorym@gmail.com">gregorym@gmail.com</a>&#62;
- * 
+ * @author Greg Milette &#60;<a href="mailto:gregorym@gmail.com">gregorym@gmail.com</a>&#62;
+ * @author Adam Stroud &#60;<a href="mailto:adam.stroud@gmail.com">adam.stroud@gmail.com</a>&#62;
  */
-public class SensorSelectorFragment extends ListFragment
+public class SensorListFragment extends ListFragment
 {
     private static final String TAG = "SensorSelectorFragment";
 
-    private SensorDisplayFragment sensorDisplay;
+    private CallbackListener callbackListener;
 
     /**
-     * connect with a display fragment to call later when user clicks a sensor
-     * name, also setup the ListAdapter to show all the Sensors
-     */
-    public void setSensorDisplay(SensorDisplayFragment sensorDisplay)
+	 * @see android.support.v4.app.Fragment#onAttach(android.app.Activity)
+	 */
+	@Override
+	public void onAttach(Activity activity)
+	{
+		super.onAttach(activity);
+		
+		if (activity instanceof CallbackListener)
+		{
+			this.callbackListener = (CallbackListener) activity;
+		}
+		else
+		{
+			throw new InvalidFragmentActivityException(activity, CallbackListener.class);
+		}
+	}
+
+	@Override
+    public void onResume()
     {
-        this.sensorDisplay = sensorDisplay;
+		super.onResume();
 
         SensorManager sensorManager =
-                (SensorManager) getActivity().getSystemService(
-                        Activity.SENSOR_SERVICE);
+                (SensorManager) getActivity().getSystemService(Activity.SENSOR_SERVICE);
         List<Sensor> sensors = sensorManager.getSensorList(Sensor.TYPE_ALL);
         this.setListAdapter(new SensorListAdapter(getActivity()
                 .getApplicationContext(), android.R.layout.simple_list_item_1,
@@ -60,27 +72,11 @@ public class SensorSelectorFragment extends ListFragment
     }
 
     /**
-     * hide the list of sensors and show the sensor display fragment
-     * add these changes to the backstack
-     */
-    private void showSensorFragment(Sensor sensor)
-    {
-        sensorDisplay.displaySensor(sensor);
-        FragmentTransaction ft =
-                getActivity().getSupportFragmentManager().beginTransaction();
-        ft.hide(this);
-        ft.show(sensorDisplay);
-        ft.addToBackStack("Showing sensor: " + sensor.getName());
-        ft.commit();
-    }
-
-    /**
      * list view adapter to show sensor names and respond to clicks.
      */
     private class SensorListAdapter extends ArrayAdapter<Sensor>
     {
-        public SensorListAdapter(Context context, int textViewResourceId,
-                List<Sensor> sensors)
+        public SensorListAdapter(Context context, int textViewResourceId, List<Sensor> sensors)
         {
             super(context, textViewResourceId, sensors);
         }
@@ -89,8 +85,7 @@ public class SensorSelectorFragment extends ListFragment
          * create a text view containing the sensor name
          */
         @Override
-        public View getView(final int position, View convertView,
-                ViewGroup parent)
+        public View getView(final int position, View convertView, ViewGroup parent)
         {
             final Sensor selectedSensor = getItem(position);
             if (convertView == null)
@@ -109,14 +104,35 @@ public class SensorSelectorFragment extends ListFragment
                 {
                     if (BuildConfig.DEBUG)
                     {
-                        Log.d(TAG,
-                                "display sensor! " + selectedSensor.getName());
+                        Log.d(TAG, String.format("sensor selected; type = %d, name = %s",
+                        		                 selectedSensor.getType(),
+                        		                 selectedSensor.getName()));
                     }
 
-                    showSensorFragment(selectedSensor);
+                    callbackListener.onSensorSelected(selectedSensor.getType(),
+                    		                          selectedSensor.getName());
                 }
             });
             return convertView;
         }
+    }
+    
+    /**
+     * Handles the callbacks for the fragment. This interface allows the fragment to notify the
+     * parent activity of actions that have taken place while the fragment is displayed
+     * 
+     * @author Adam Stroud &#60;<a href="mailto:adam.stroud@gmail.com">adam.stroud@gmail.com</a>&#62;
+     */
+    public interface CallbackListener
+    {
+    	/**
+    	 * Called when a sensor from the list is selected.
+    	 * 
+    	 * @param sensorType The sensor type of the selected sensor. This value will map to one of 
+    	 * the constants in {@link android.hardware.Sensor}.
+    	 * 
+    	 * @param sensorName The name of the sensor as reported by @link {@link android.hardware.Sensor#getName()}
+    	 */
+    	public void onSensorSelected(int sensorType, String sensorName);
     }
 }

@@ -16,28 +16,42 @@
 package root.gast.playground.sensor;
 
 import root.gast.playground.R;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
 
 /**
+ * Displays a list of available sensors to the user.
+ * 
  * @author Greg Milette &#60;<a href="mailto:gregorym@gmail.com">gregorym@gmail.com</a>&#62;
+ * @author Adam Stroud &#60;<a href="mailto:adam.stroud@gmail.com">adam.stroud@gmail.com</a>&#62;
  */
-public class SensorListActivity extends FragmentActivity
+public class SensorListActivity extends FragmentActivity implements SensorListFragment.CallbackListener
 {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sensor_main);
-
-        // wire up the fragments so selector
-        // can call display
-        SensorDisplayFragment sensorDisplay =
-                (SensorDisplayFragment) getSupportFragmentManager()
-                        .findFragmentById(R.id.frag_sensor_view);
-        SensorSelectorFragment sensorSelect =
-                (SensorSelectorFragment) getSupportFragmentManager()
-                        .findFragmentById(R.id.frag_sensor_select);
-        sensorSelect.setSensorDisplay(sensorDisplay);
     }
+
+	@Override
+	public void onSensorSelected(int sensorType, String sensorName)
+	{
+		SensorDisplayFragment sensorDisplay =
+                (SensorDisplayFragment) getSupportFragmentManager().findFragmentById(R.id.sensorDisplayFragment);
+		
+		if (sensorDisplay == null)
+		{
+			Intent intent = new Intent(this, SensorDisplayActivity.class);
+			intent.putExtra(SensorDisplayActivity.KEY_SENSOR_TYPE, sensorType);
+			intent.putExtra(SensorDisplayActivity.KEY_SENSOR_NAME, sensorName);
+			startActivity(intent);
+		}
+		else
+		{
+			sensorDisplay.displaySensor(sensorType, sensorName);
+		}
+	}
 }

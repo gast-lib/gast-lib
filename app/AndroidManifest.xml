@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" android:required="false"/>
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="false" />
@@ -61,6 +61,7 @@
         
         
         <activity android:name=".sensor.SensorListActivity" android:label="@string/launchSensorList"/>
+        <activity android:name=".sensor.SensorDisplayActivity" android:label="@string/launchSensorDisplay"/>
         
         <activity android:name=".sensor.SensorDetails" android:label="@string/launchSensorList"/>
 
@@ -86,8 +87,6 @@
                  android:windowSoftInputMode="stateHidden">
         </activity>
         
-        <activity android:name=".speech.tts.TextToSpeechDemo" />
-
         <activity android:name=".speech.tts.TextToSpeechDemo" />
         
         <activity android:name="jjil.app.barcodereader.BarcodeReaderActivity" android:label="@string/launchImageBarcode"/>
