@@ -28,7 +28,10 @@ import android.util.Log;
 public class AccelerationEventListener implements SensorEventListener
 {
     private static final String TAG = "AccelerationEventListener";
-    private static final int THRESHHOLD = 2;
+    
+    public static final int THRESHOLD_HIGH = 10;
+    public static final int THRESHOLD_LOW = 2;
+    private int threshold;
     private static final float ALPHA = 0.8f;
     private static final int HIGH_PASS_MINIMUM = 10;
 
@@ -37,14 +40,21 @@ public class AccelerationEventListener implements SensorEventListener
     private boolean useHighPassFilter;
 
     private MovementDetectionListener callback;
-    
+
     public AccelerationEventListener(boolean useHighPassFilter, 
-            MovementDetectionListener callback)
+        MovementDetectionListener callback)
+    {
+        this(useHighPassFilter, callback, THRESHOLD_LOW);
+    }
+
+    public AccelerationEventListener(boolean useHighPassFilter, 
+            MovementDetectionListener callback, int threshold)
     {
         this.useHighPassFilter = useHighPassFilter;
         gravity = new float[3];
         highPassCount = 0;
         this.callback = callback;
+        this.threshold = threshold;
     }
 
     @Override
@@ -70,9 +80,9 @@ public class AccelerationEventListener implements SensorEventListener
 
             // A "movement" is only triggered of the total acceleration is
             // above a threshold
-            if (acceleration > THRESHHOLD)
+            if (acceleration > threshold)
             {
-                Log.i(TAG, "Movement detected");
+                Log.i(TAG, "Movement detected:" + acceleration);
                 callback.movementDetected(true);
             }
         }
@@ -109,6 +119,7 @@ public class AccelerationEventListener implements SensorEventListener
      */
     public void stop()
     {
+        
     }
 
     /**

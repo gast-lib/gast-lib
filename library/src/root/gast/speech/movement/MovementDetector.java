@@ -31,28 +31,36 @@ public class MovementDetector
     private static final String TAG = "MovementDetector";
 
     private static final int RATE = SensorManager.SENSOR_DELAY_NORMAL;
-    private static final int TTS_STREAM = AudioManager.STREAM_NOTIFICATION;
 
     private SensorManager sensorManager;
     private boolean readingAccelerationData;
     private AccelerationEventListener sensorListener;
     private boolean useHighPassFilter;
     private boolean useAccelerometer;
+    private int threshold;
 
     public MovementDetector(Context context)
     {
         this(context, false);
     }
-    
+
+    public MovementDetector(Context context, boolean useAccelerometer)
+    {
+        this(context, false, useAccelerometer, AccelerationEventListener.THRESHOLD_LOW);
+    }
+
     /**
      * @param useAccelerometer otherwise use linear acceleration
+     * @param threshold from {@link AccelerationEventListener#THRESHOLD_HIGH}
      */
-    public MovementDetector(Context context, boolean useAccelerometer)
+    public MovementDetector(Context context, boolean useHighPassFilter, boolean useAccelerometer, int threshold)
     {
         sensorManager =
                 (SensorManager) context
                         .getSystemService(Context.SENSOR_SERVICE);
         this.useAccelerometer = useAccelerometer;
+        this.useHighPassFilter = useHighPassFilter;
+        this.threshold = threshold;
     }
 
     public void startReadingAccelerationData(MovementDetectionListener resultCallback)
@@ -67,7 +75,7 @@ public class MovementDetector
             if (useAccelerometer)
             {
                 sensorListener =
-                        new AccelerationEventListener(useHighPassFilter, resultCallback);
+                        new AccelerationEventListener(useHighPassFilter, resultCallback, threshold);
                 sensorManager.registerListener(sensorListener,
                         sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
                         RATE);
@@ -75,7 +83,7 @@ public class MovementDetector
             else
             {
                 sensorListener =
-                        new AccelerationEventListener(useHighPassFilter, resultCallback);
+                        new AccelerationEventListener(useHighPassFilter, resultCallback, threshold);
                 sensorManager.registerListener(sensorListener,
                         sensorManager
                                 .getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION),
