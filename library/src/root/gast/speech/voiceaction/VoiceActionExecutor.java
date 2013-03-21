@@ -19,6 +19,7 @@ import java.util.List;
 
 import root.gast.speech.SpeechRecognizingActivity;
 import root.gast.speech.tts.TextToSpeechUtils;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.speech.RecognizerIntent;
@@ -32,6 +33,7 @@ import android.util.Log;
  * @author Greg Milette &#60;<a
  *         href="mailto:gregorym@gmail.com">gregorym@gmail.com</a>&#62;
  */
+@SuppressLint("NewApi")
 public class VoiceActionExecutor
 {
     private static final String TAG = "VoiceActionExecutor";
@@ -56,6 +58,7 @@ public class VoiceActionExecutor
     /**
      * set the tts when it is ready to complete initialization
      */
+    @SuppressLint("NewApi")
     public void setTts(TextToSpeech tts)
     {
         this.tts = tts;
@@ -119,6 +122,13 @@ public class VoiceActionExecutor
         tts.speak(toSay, TextToSpeech.QUEUE_FLUSH, null);
     }
 
+    /**
+     * add speech, don't flush the speaking queue
+     */
+    public void addSpeech(String toSay)
+    {
+        tts.speak(toSay, TextToSpeech.QUEUE_ADD, null);
+    }
 
     /**
      * execute the current active {@link VoiceAction} again speaking
@@ -181,5 +191,10 @@ public class VoiceActionExecutor
     private void setActive(VoiceAction active)
     {
         this.active = active;
+    }
+    
+    public TextToSpeech getTts()
+    {
+        return tts;
     }
 }
