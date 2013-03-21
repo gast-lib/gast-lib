@@ -35,6 +35,11 @@
             android:title="@string/pref_websearch_title" />
 
         <CheckBoxPreference
+            android:defaultValue="@string/pref_handsfree_default"
+            android:key="@string/pref_handsfree"
+            android:title="@string/pref_handsfree_title" />
+        
+        <CheckBoxPreference
             android:defaultValue="@string/pref_direct_default"
             android:key="@string/pref_direct"
             android:title="@string/pref_direct_title" />

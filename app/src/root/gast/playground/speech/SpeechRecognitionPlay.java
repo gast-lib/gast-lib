@@ -514,6 +514,9 @@ public class SpeechRecognitionPlay extends SpeechRecognizingActivity implements 
         
         //web search handling
         boolean isWebSearchAction = preferences.getBoolean(this, R.string.pref_websearch, R.string.pref_websearch_default);
+
+        boolean isHandsFreeAction = preferences.getBoolean(this, R.string.pref_handsfree, R.string.pref_handsfree_default);
+
         if (isWebSearchAction)
         {
             intentToSend = RecognizerIntentFactory.getWebSearchRecognizeIntent();
@@ -525,7 +528,14 @@ public class SpeechRecognitionPlay extends SpeechRecognizingActivity implements 
         }
         else
         {
-            intentToSend = RecognizerIntentFactory.getBlankRecognizeIntent();
+            if (isHandsFreeAction && Build.VERSION.SDK_INT >= 16)
+            {
+                intentToSend = RecognizerIntentFactory.getHandsFreeRecognizeIntent();
+            }
+            else
+            {
+                intentToSend = RecognizerIntentFactory.getBlankRecognizeIntent();
+            }
         }
 
         //language model

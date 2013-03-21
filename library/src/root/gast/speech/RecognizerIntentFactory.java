@@ -49,6 +49,12 @@ public class RecognizerIntentFactory
         return intent;
     }
 
+    public static Intent getHandsFreeRecognizeIntent()
+    {
+        Intent intent = new Intent(RecognizerIntent.ACTION_VOICE_SEARCH_HANDS_FREE);
+        return intent;
+    }
+
     public static Intent getPossilbeWebSearchRecognizeIntent(String prompt)
     {
         Intent intent = new Intent(RecognizerIntent.ACTION_WEB_SEARCH);

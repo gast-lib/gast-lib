@@ -15,6 +15,10 @@
     <string name="pref_websearch_title">Web Search</string>
     <string name="pref_websearch_default">false</string>
 
+    <string name="pref_handsfree">pref_handsfree</string>
+    <string name="pref_handsfree_title">Hands Free</string>
+    <string name="pref_handsfree_default">false</string>
+    
     <string name="pref_direct">pref_direct</string>
     <string name="pref_direct_title">Use SpeechRecognizer</string>
     <string name="pref_direct_default">false</string>
