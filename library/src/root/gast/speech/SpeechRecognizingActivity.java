@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Locale;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognitionListener;
@@ -84,10 +85,12 @@ public abstract class SpeechRecognizingActivity extends Activity implements
     /**
      * execute the RecognizerIntent, then call
      * {@link #receiveWhatWasHeard(List, List)} when done
+     * might throw a {@link ActivityNotFoundException} if the
+     * device cannot respond to the Intent
      */
     public void recognize(Intent recognizerIntent)
     {
-        startActivityForResult(recognizerIntent, 
+            startActivityForResult(recognizerIntent,
                 VOICE_RECOGNITION_REQUEST_CODE);
     }
 
