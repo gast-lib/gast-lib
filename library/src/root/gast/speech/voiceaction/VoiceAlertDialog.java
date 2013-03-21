@@ -142,4 +142,9 @@ public class VoiceAlertDialog extends MultiCommandVoiceAction
         }
         add(new MatcherCommand(matcher, listener));
     }
+    
+    public void addOnAnyUtterance(OnUnderstoodListener listener)
+    {
+        add(new MatchAnythingCommand(listener));
+    }
 }
