@@ -55,11 +55,6 @@ public class MovementDetector
     {
         this.minTimeBetweenMovementDetections = minTimeBetweenMovementDetections;
     }
-    
-    public void setMinTimeBetweenShakes(long minTimeBetweenMovementDetections)
-    {
-        this.minTimeBetweenMovementDetections = minTimeBetweenMovementDetections;
-    }
 
     /**
      * @param useAccelerometer otherwise use linear acceleration
