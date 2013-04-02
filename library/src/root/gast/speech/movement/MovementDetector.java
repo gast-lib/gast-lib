@@ -38,6 +38,7 @@ public class MovementDetector
     private boolean useHighPassFilter;
     private boolean useAccelerometer;
     private int threshold;
+    private long minTimeBetweenMovementDetections;
 
     public MovementDetector(Context context)
     {
@@ -47,6 +48,17 @@ public class MovementDetector
     public MovementDetector(Context context, boolean useAccelerometer)
     {
         this(context, false, useAccelerometer, AccelerationEventListener.THRESHOLD_LOW);
+    }
+    
+    public void setMinTimeBetweenMovementDetections(
+        long minTimeBetweenMovementDetections)
+    {
+        this.minTimeBetweenMovementDetections = minTimeBetweenMovementDetections;
+    }
+    
+    public void setMinTimeBetweenShakes(long minTimeBetweenMovementDetections)
+    {
+        this.minTimeBetweenMovementDetections = minTimeBetweenMovementDetections;
     }
 
     /**
@@ -61,6 +73,7 @@ public class MovementDetector
         this.useAccelerometer = useAccelerometer;
         this.useHighPassFilter = useHighPassFilter;
         this.threshold = threshold;
+        this.minTimeBetweenMovementDetections = AccelerationEventListener.DEFAULT_MIN_TIME_BETWEEN_MOVEMENT_DISABLED;
     }
 
     public void startReadingAccelerationData(MovementDetectionListener resultCallback)
@@ -75,7 +88,8 @@ public class MovementDetector
             if (useAccelerometer)
             {
                 sensorListener =
-                        new AccelerationEventListener(useHighPassFilter, resultCallback, threshold);
+                        new AccelerationEventListener(
+                            useHighPassFilter, resultCallback, threshold, minTimeBetweenMovementDetections);
                 sensorManager.registerListener(sensorListener,
                         sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
                         RATE);
@@ -83,7 +97,7 @@ public class MovementDetector
             else
             {
                 sensorListener =
-                        new AccelerationEventListener(useHighPassFilter, resultCallback, threshold);
+                        new AccelerationEventListener(useHighPassFilter, resultCallback, threshold, minTimeBetweenMovementDetections);
                 sensorManager.registerListener(sensorListener,
                         sensorManager
                                 .getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION),

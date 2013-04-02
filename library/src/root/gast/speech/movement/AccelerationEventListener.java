@@ -40,21 +40,37 @@ public class AccelerationEventListener implements SensorEventListener
     private boolean useHighPassFilter;
 
     private MovementDetectionListener callback;
+    
+    private long lastDetectedMovement = Long.MAX_VALUE;
+    
+    private final static long DEFAULT_MIN_TIME_BETWEEN_MOVEMENT = 300;
+
+    public final static long DEFAULT_MIN_TIME_BETWEEN_MOVEMENT_DISABLED = -1;
+
+    private long minTimeBetweenMovement = DEFAULT_MIN_TIME_BETWEEN_MOVEMENT_DISABLED;
 
     public AccelerationEventListener(boolean useHighPassFilter, 
         MovementDetectionListener callback)
     {
-        this(useHighPassFilter, callback, THRESHOLD_LOW);
+        this(useHighPassFilter, callback, THRESHOLD_LOW, DEFAULT_MIN_TIME_BETWEEN_MOVEMENT_DISABLED);
     }
 
     public AccelerationEventListener(boolean useHighPassFilter, 
-            MovementDetectionListener callback, int threshold)
+            MovementDetectionListener callback, int threshold, long minTimeBetweenMovement)
     {
         this.useHighPassFilter = useHighPassFilter;
         gravity = new float[3];
         highPassCount = 0;
         this.callback = callback;
         this.threshold = threshold;
+        this.minTimeBetweenMovement = minTimeBetweenMovement;
+        
+        lastDetectedMovement = System.currentTimeMillis();
+    }
+    
+    public void setMinTimeBetweenMovement(long minTimeBetweenMovement)
+    {
+        this.minTimeBetweenMovement = minTimeBetweenMovement;
     }
 
     @Override
@@ -83,7 +99,7 @@ public class AccelerationEventListener implements SensorEventListener
             if (acceleration > threshold)
             {
                 Log.i(TAG, "Movement detected:" + acceleration);
-                callback.movementDetected(true);
+                possiblyReportMovement();
             }
         }
     }
@@ -112,6 +128,21 @@ public class AccelerationEventListener implements SensorEventListener
         filteredValues[2] = z - gravity[2];
 
         return filteredValues;
+    }
+    
+    private void possiblyReportMovement()
+    {
+        long currentTime = System.currentTimeMillis();
+        long timeDiff = currentTime - lastDetectedMovement;
+        if (timeDiff < minTimeBetweenMovement)
+        {
+            Log.d(TAG, "movement detected too soon " + timeDiff);
+        }
+        else
+        {
+            lastDetectedMovement = currentTime;
+            callback.movementDetected(true);
+        }
     }
 
     /**
