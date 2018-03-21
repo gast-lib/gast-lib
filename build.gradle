@@ -3,18 +3,38 @@
 buildscript {
     repositories {
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:3.0.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+            ext.kotlin_version = '1.2.30'
+
+            classpath 'com.android.tools.build:gradle:3.0.1'
+            classpath 'com.google.gms:google-services:3.0.0'
+
+            //Kotlin
+            classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.30'
+            classpath "org.jetbrains.kotlin:kotlin-android-extensions:1.2.30"
     }
+}
+
+plugins {
+    id "org.jetbrains.kotlin.kapt" version "1.2.30"
 }
 
 allprojects {
     repositories {
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 }
 
@@ -22,11 +42,13 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
+//buildToolsVersion = "26.0.2"
 ext {
-    compileSdkVersion = "Google Inc.:Google APIs:16"
-    buildToolsVersion = "24.0.1"
-    minSdkVersion = 10
-    targetSdkVersion = 15
+    kotlinVersion = "1.2.30"
+    compileSdkVersion = 19
+    buildToolsVersion = "27.0.3"
+    minSdkVersion = 19
+    targetSdkVersion = 22
     sourceCompatibilityVersion = JavaVersion.VERSION_1_7
     targetCompatibilityVersion = JavaVersion.VERSION_1_7
 }

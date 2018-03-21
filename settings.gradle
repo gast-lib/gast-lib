@@ -1,1 +1,1 @@
-include ':app', ":library", ":jjil", ":JJIL-Android", ":libraryLuceneExt"
+include ':app', ":library"

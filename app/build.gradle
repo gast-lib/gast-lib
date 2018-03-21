@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -22,11 +25,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    
+     lintOptions {
+          abortOnError false
+      }
 }
 
+//#     compile project(':JJIL-Android')
+//#     compile project(':libraryLuceneExt')
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.2.30"
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':library')
-    compile project(':JJIL-Android')
-    compile project(':libraryLuceneExt')
 }
